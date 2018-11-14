@@ -25,44 +25,44 @@ events = [
 
 ]
 
-sponser = [
+sponsor = [
     {
-        'title': 'Sponser1',
+        'title': 'Sponsor1',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-        'title': 'Sponser2',
+        'title': 'Sponsor2',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-        'title': 'Sponser3',
+        'title': 'Sponsor3',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-        'title': 'Sponser4',
+        'title': 'Sponsor4',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-        'title': 'Sponser5',
+        'title': 'Sponsor5',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-        'title': 'Sponser6',
+        'title': 'Sponsor6',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-        'title': 'Sponser7',
+        'title': 'Sponsor7',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-        'title': 'Sponser8',
+        'title': 'Sponsor8',
         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     }
 ]
 
 args = {
     'events': events,
-    'sponsers': sponser
+    'sponsors': sponsor
 }
 
 
