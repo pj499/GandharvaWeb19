@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gandharvaApp'
+    'GandharvaWeb19',
+    'registrations'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,11 @@ ROOT_URLCONF = 'GandharvaWeb19.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 'GandharvaWeb19/html_files/',
+
+
+                 ]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
