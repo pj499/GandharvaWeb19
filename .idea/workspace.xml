@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3aa3ac33-e2a0-4503-956d-6ef8c5c04b9b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GandharvaWeb19.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GandharvaWeb19.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GandharvaWeb19/html_files/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GandharvaWeb19/html_files/registrations/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GandharvaWeb19/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/GandharvaWeb19/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GandharvaWeb19/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/GandharvaWeb19/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GandharvaWeb19/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/GandharvaWeb19/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrations/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrations/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrations/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrations/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrations/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrations/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrations/views.py" beforeDir="false" />
-    </list>
+    <list default="true" id="3aa3ac33-e2a0-4503-956d-6ef8c5c04b9b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +116,7 @@
     <session id="-1465650583">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.opened" value="1" />
         </counts>

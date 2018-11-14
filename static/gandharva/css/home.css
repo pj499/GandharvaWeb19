@@ -238,35 +238,92 @@ img {
 
 }
 
-.row-equal > div[class*='col-'] {
-    display: flex;
-    flex: 1 0 auto;
+.orange-fade {
+    background: #ff910e;
+    background: linear-gradient(135deg, #ff910e 0, #ffa841 100%);
 }
 
-.row-equal .card {
+.pos-r {
+    position: relative !important;
+}
+
+.white {
+    background: #fff;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.text-gray {
+    color: #363636;
+    font-weight: bold;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator {
+    width: 14%;
+    height: 3px;
+    margin: 1.2em auto 1em;
+    background: #ffc53a;
+}
+
+.one-slide {
+    border-radius: 3px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    height: 300px;
+}
+
+.one-slide img {
+    width: 60%;
+}
+
+.carousel-controls .control {
+    position: absolute;
+    cursor: pointer;
+    top: 56.4%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: -1.875rem;
+}
+
+.next {
+    right: -1.875rem;
+}
+
+.testimonial-carousel.slick-initialized {
+    display: block;
+}
+
+.testimonial-carousel .message {
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.testimonial-carousel .brand {
     width: 100%;
 }
 
-/* ensure equal card height inside carousel */
-.carousel-inner > .row-equal.active,
-.carousel-inner > .row-equal.next,
-.carousel-inner > .row-equal.prev {
-    display: flex;
-}
+@media (max-width: 575px) {
+    .testimonial-carousel .one-slide {
+        height: 200px;
+    }
 
-/* prevent flicker during transition */
-.carousel-inner > .row-equal.active.left,
-.carousel-inner > .row-equal.active.right {
-    opacity: 0.5;
-    display: flex;
-}
-
-/* control image height */
-.card-img-top-250 {
-    max-height: 250px;
-    overflow: hidden;
-}
-
-.card-header {
-    color: dodgerblue
+    .testimonial-carousel img {
+        width: 40%;
+    }
 }

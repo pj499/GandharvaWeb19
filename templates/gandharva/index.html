@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/home.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/component.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/slick.min.css' %}">
+
     {#            <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/normalize.css' %}">#}
 </head>
 <body>
@@ -43,7 +45,7 @@
                 </div>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#sponsorSection">Sponsors</a>
+                <a class="nav-link" href="#sponserSection">Sponsors</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#venueSection">Venue</a>
@@ -53,59 +55,59 @@
 </nav>
 
 <a id="home">
-        <div class="row" style="background-color: rgba(0, 0, 0, 0.1);">
-            <div class="col-12" style="z-index: -1;">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" style="z-index: -1" data-ride="carousel"
-                     data-interval="1800">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/1.jpg' %}" alt="First slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/2.jpg' %}" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/3.jpg' %}" alt="Third slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/4.jpg' %}" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/5.jpg' %}" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/6.jpg' %}" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/7.jpg' %}" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/8.jpg' %}" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/9.jpg' %}" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/10.jpg' %}" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="{% static 'gandharva/img/11.jpg' %}" alt="Second slide">
-                        </div>
+    <div class="row" style="background-color: rgba(0, 0, 0, 0.1);">
+        <div class="col-12" style="z-index: -1;">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" style="z-index: -1" data-ride="carousel"
+                 data-interval="1800">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/1.jpg' %}" alt="First slide">
                     </div>
-                </div>
-                <div class="clock">
-                    <div id="particle">
-                        <div id="particles-js"></div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/2.jpg' %}" alt="Second slide">
                     </div>
-                    <br>
-                    <h1>Gandharva 2019</h1>
-                    <br>
-                    <div id="timer"></div>
-
-                    <br>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/3.jpg' %}" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/4.jpg' %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/5.jpg' %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/6.jpg' %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/7.jpg' %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/8.jpg' %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/9.jpg' %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/10.jpg' %}" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'gandharva/img/11.jpg' %}" alt="Second slide">
+                    </div>
                 </div>
             </div>
+            <div class="clock">
+                <div id="particle">
+                    <div id="particles-js"></div>
+                </div>
+                <br>
+                <h1>Gandharva 2019</h1>
+                <br>
+                <div id="timer"></div>
+
+                <br>
+            </div>
         </div>
+    </div>
 </a>
 
 <br>
@@ -134,171 +136,39 @@
     <br>
 </a>
 <br>
-
-{#Slider not working.... Prints everything at once#}
-
-{#<div class="carousel slide" data-ride="carousel" id="postsCarousel">#}
-{#    <div class="container">#}
-{#        <div class="row">#}
-{#            <div class="col-12 text-right mb-4">#}
-{#                <a class="btn btn-outline-secondary prev" href="" title="go back"><i#}
-{#                        class="fa fa-lg fa-chevron-left"></i></a>#}
-{#                <a class="btn btn-outline-secondary next" href="" title="more"><i class="fa fa-lg fa-chevron-right"></i></a>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#    <div class="container p-t-0 m-t-2 carousel-inner">#}
-{#        <div class="row row-equal carousel-item active m-t-0">#}
-{#            {% for sponsor in sponsors %}#}
-{#                <div class="col-md-4">#}
-{#                    <div class="card">#}
-{#                        <div class="card-img-top card-img-top-250">#}
-{#                            <img class="img-fluid" src="#" alt="Image">#}
-{#                        </div>#}
-{#                        <div class="card-block p-t-2">#}
-{#                            <div class="card-header"><h1>{{ sponsor.title }}</h1></div>#}
-{#                            <div class="card-text">{{ sponsor.description }}</div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#                {% if forloop.counter|divisibleby:3 %}</div>#}
-{#                    <div class="row row-equal carousel-item active m-t-0">{% endif %}#}
-{#            {% if forloop.last %}</div>{% endif %}#}
-{#            {% endfor %}#}
-{#</div>#}
-{#</div>#}
-
 <br>
 <br>
+<a id="sponserSection">
+    <section class="orange-fade p-5 margin-top-xl pos-r">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center font-weight-bold text-white">Our Sponsors</h2>
+                    <p></p>
+                    <div class="mt-5 pos-r">
+                        <div class="carousel-controls testimonial-carousel-controls">
+                            <div class="control prev"><i class="fa fa-chevron-left text-white">&nbsp;</i></div>
+                            <div class="control next"><i class="fa fa-chevron-right text-white">&nbsp;</i></div>
+                        </div>
+                        <div class="testimonial-carousel">
+                            {% for sponsor in sponsors %}
+                                <div class="one-slide white">
+                                    <div class="testimonial w-100 h-100  p-3 text-center">
+                                        <div class="brand"><img alt="logo"
+                                                                src="{% static sponsor.logo %}"
+                                                                style="width: 160px;height: 120px"/></div>
+                                        <div class="separator">&nbsp;</div>
+                                        <div class="message text-center text-gray">{{ sponsor.title }}</div>
 
-{#This slider is working but info is static#}
-
-<a id="sponsorSection">
-    <h1 style="text-align: center">Sponsosrs</h1>
-    <div class="container">
-        <section class="carousel slide" data-ride="carousel" id="postsCarousel">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-right mb-4">
-                        <a class="btn btn-outline-secondary prev" href="" title="go back"><i
-                                class="fa fa-lg fa-chevron-left"></i></a>
-                        <a class="btn btn-outline-secondary next" href="" title="more"><i
-                                class="fa fa-lg fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="container p-t-0 m-t-2 carousel-inner">
-                <div class="row row-equal carousel-item active m-t-0">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor1</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor2</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor3</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row row-equal carousel-item m-t-0">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor4</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor5</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor6</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
-    <br>
+        </div>
+    </section>
 </a>
 <br>
 <br>
@@ -325,6 +195,9 @@
     <br>
 </a>
 <br>
+<br>
+<br>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -340,6 +213,7 @@
 {#<script src="{% static 'gandharva/js/modernizr.custom.js' %}"></script>#}
 <script src="{% static 'gandharva/js/particles.min.js' %}"></script>
 <script src="{% static 'gandharva/js/app.js' %}"></script>
+<script src="{% static 'gandharva/js/slick.min.js' %}"></script>
 
 </body>
 </html>

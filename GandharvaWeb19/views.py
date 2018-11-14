@@ -27,37 +27,26 @@ events = [
 
 sponsor = [
     {
-        'title': 'Sponsor1',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'RedBull',
+        'logo': 'gandharva/img/sponsors/redbull.png'
     },
     {
-        'title': 'Sponsor2',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'Facebook',
+        'logo': 'gandharva/img/sponsors/facebook.png'
     },
     {
-        'title': 'Sponsor3',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'Google',
+        'logo': 'gandharva/img/sponsors/google.png'
     },
     {
-        'title': 'Sponsor4',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'Github',
+        'logo': 'gandharva/img/sponsors/github.png'
     },
     {
-        'title': 'Sponsor5',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'Microsoft',
+        'logo': 'gandharva/img/sponsors/microsoft.png'
     },
-    {
-        'title': 'Sponsor6',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-    },
-    {
-        'title': 'Sponsor7',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-    },
-    {
-        'title': 'Sponsor8',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-    }
+
 ]
 
 args = {
