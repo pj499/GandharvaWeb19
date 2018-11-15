@@ -1,5 +1,7 @@
 console.log('Hello');
 
+sal();
+
 $("#timer")
     .countdown("2019/01/01", function (event) {
         $(this).text(
@@ -35,3 +37,4 @@ $(document).ready(function () {
         }]
     });
 });
+
