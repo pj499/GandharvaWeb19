@@ -4,25 +4,25 @@ from django.http import HttpResponse
 events = [
     {
         'title': 'Mech Events',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         'img': 'gandharva/img/deptEvent/mech.jpg'
     },
 
     {
         'title': 'ENTC Events',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         'img': 'gandharva/img/deptEvent/entc.jpg'},
     {
         'title': 'Comp Events',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         'img': 'gandharva/img/deptEvent/comp.jpg'},
     {
         'title': 'IT Events',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         'img': 'gandharva/img/deptEvent/it.jpg'},
     {
         'title': 'Civil Events',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         'img': 'gandharva/img/deptEvent/civil.jpg'},
 
 ]

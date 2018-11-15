@@ -128,7 +128,7 @@
             {% if forloop.first %}
                 <div class="row">{% endif %}
         <div class="col-sm-4  eventDiv hvr-bounce-to-top"
-             style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 340px;height: 280px"
+             style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 100%;height: auto"
              data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
             <h1 class="eventTitle">{{ event.title }}</h1>
             <p class="eventDescription">
@@ -153,7 +153,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h2 class="text-center font-weight-bold text-white" data-sal="slide-up"
-                        data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">Our
+                        data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100" style=" font-family: 'Kodchasan', sans-serif;">Our
                         Sponsors</h2>
                     <p></p>
                     <div class="mt-5 pos-r" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300"
