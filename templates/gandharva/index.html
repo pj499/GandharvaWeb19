@@ -55,8 +55,9 @@
 </nav>
 
 <a id="home">
-    <div class="row" style="background-color: rgba(0, 0, 0, 0.1);">
-        <div class="col-12" style="z-index: -1;">
+    <div class="container-fluid" style="background-color: rgba(0,0,0,0.5);z-index: -1">
+    <div class="row">
+        <div class="col-12" style="z-index: 100;">
             <div id="carouselExampleSlidesOnly" class="carousel slide" style="z-index: -1" data-ride="carousel"
                  data-interval="1800">
                 <div class="carousel-inner">
@@ -108,6 +109,7 @@
             </div>
         </div>
     </div>
+    </div>
 </a>
 
 <br>
@@ -116,11 +118,12 @@
     <br>
     <h1 style="text-align: center">Events</h1>
     <br>
-    <div class="container">
+    <div class="container-fluid">
         {% for event in events %}
             {% if forloop.first %}
                 <div class="row">{% endif %}
-        <div class="col-sm-4  eventDiv hvr-bounce-to-top">
+        <div class="col-sm-4  eventDiv hvr-bounce-to-top"
+             style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 340px;height: 280px">
             <h1 class="eventTitle">{{ event.title }}</h1>
             <p class="eventDescription">
                 {{ event.description }}
