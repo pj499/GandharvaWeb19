@@ -13,11 +13,17 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/home.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/component.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/slick.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/sal.css' %}">
+
+
     {#            <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/normalize.css' %}">#}
+
+
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top cl-effect-4">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top cl-effect-4" style="opacity: 0.9">
     <a class="navbar-brand" href="#">Gandharva 2019</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +49,7 @@
                 </div>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#sponsorSection">Sponsors</a>
+                <a class="nav-link" href="#sponserSection">Sponsors</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#venueSection">Venue</a>
@@ -53,8 +59,9 @@
 </nav>
 
 <a id="home">
-        <div class="row" style="background-color: rgba(0, 0, 0, 0.1);">
-            <div class="col-12" style="z-index: -1;">
+    <div class="container-fluid" style="background-color: rgba(0,0,0,0.5);z-index: -1">
+        <div class="row">
+            <div class="col-12" style="z-index: 100;">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" style="z-index: -1" data-ride="carousel"
                      data-interval="1800">
                     <div class="carousel-inner">
@@ -106,19 +113,23 @@
                 </div>
             </div>
         </div>
+    </div>
 </a>
 
 <br>
 <br>
 <a id="eventsSection">
     <br>
-    <h1 style="text-align: center">Events</h1>
+    <h1 style="text-align: center" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">
+        Events</h1>
     <br>
-    <div class="container">
+    <div class="container-fluid">
         {% for event in events %}
             {% if forloop.first %}
                 <div class="row">{% endif %}
-        <div class="col-sm-4  eventDiv hvr-bounce-to-top">
+        <div class="col-sm-4  eventDiv hvr-bounce-to-top"
+             style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 340px;height: 280px"
+             data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
             <h1 class="eventTitle">{{ event.title }}</h1>
             <p class="eventDescription">
                 {{ event.description }}
@@ -134,171 +145,42 @@
     <br>
 </a>
 <br>
-
-{#Slider not working.... Prints everything at once#}
-
-{#<div class="carousel slide" data-ride="carousel" id="postsCarousel">#}
-{#    <div class="container">#}
-{#        <div class="row">#}
-{#            <div class="col-12 text-right mb-4">#}
-{#                <a class="btn btn-outline-secondary prev" href="" title="go back"><i#}
-{#                        class="fa fa-lg fa-chevron-left"></i></a>#}
-{#                <a class="btn btn-outline-secondary next" href="" title="more"><i class="fa fa-lg fa-chevron-right"></i></a>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#    <div class="container p-t-0 m-t-2 carousel-inner">#}
-{#        <div class="row row-equal carousel-item active m-t-0">#}
-{#            {% for sponsor in sponsors %}#}
-{#                <div class="col-md-4">#}
-{#                    <div class="card">#}
-{#                        <div class="card-img-top card-img-top-250">#}
-{#                            <img class="img-fluid" src="#" alt="Image">#}
-{#                        </div>#}
-{#                        <div class="card-block p-t-2">#}
-{#                            <div class="card-header"><h1>{{ sponsor.title }}</h1></div>#}
-{#                            <div class="card-text">{{ sponsor.description }}</div>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#                {% if forloop.counter|divisibleby:3 %}</div>#}
-{#                    <div class="row row-equal carousel-item active m-t-0">{% endif %}#}
-{#            {% if forloop.last %}</div>{% endif %}#}
-{#            {% endfor %}#}
-{#</div>#}
-{#</div>#}
-
 <br>
 <br>
+<a id="sponserSection">
+    <section class="orange-fade p-5 margin-top-xl pos-r">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center font-weight-bold text-white" data-sal="slide-up"
+                        data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">Our
+                        Sponsors</h2>
+                    <p></p>
+                    <div class="mt-5 pos-r" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300"
+                         data-sal-duration="1100">
+                        <div class="carousel-controls testimonial-carousel-controls">
+                            <div class="control prev"><i class="fa fa-chevron-left text-white">&nbsp;</i></div>
+                            <div class="control next"><i class="fa fa-chevron-right text-white">&nbsp;</i></div>
+                        </div>
+                        <div class="testimonial-carousel">
+                            {% for sponsor in sponsors %}
+                                <div class="one-slide white">
+                                    <div class="testimonial w-100 h-100  p-3 text-center">
+                                        <div class="brand"><img alt="logo"
+                                                                src="{% static sponsor.logo %}"
+                                                                style="width: 160px;height: 120px"/></div>
+                                        <div class="separator">&nbsp;</div>
+                                        <div class="message text-center text-gray">{{ sponsor.title }}</div>
 
-{#This slider is working but info is static#}
-
-<a id="sponsorSection">
-    <h1 style="text-align: center">Sponsosrs</h1>
-    <div class="container">
-        <section class="carousel slide" data-ride="carousel" id="postsCarousel">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-right mb-4">
-                        <a class="btn btn-outline-secondary prev" href="" title="go back"><i
-                                class="fa fa-lg fa-chevron-left"></i></a>
-                        <a class="btn btn-outline-secondary next" href="" title="more"><i
-                                class="fa fa-lg fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="container p-t-0 m-t-2 carousel-inner">
-                <div class="row row-equal carousel-item active m-t-0">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor1</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor2</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor3</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row row-equal carousel-item m-t-0">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor4</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor5</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-img-top card-img-top-250">
-                                <img class="img-fluid" src="#" alt="Image">
-                            </div>
-                            <div class="card-block p-t-2">
-                                <div class="card-header"><h1>Sponsor6</h1></div>
-                                <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Praesentium
-                                    animi molestias veritatis, pariatur dolorem error non reprehenderit vero, id.
-                                    Incidunt
-                                    hic
-                                    laudantium soluta recusandae, voluptas libero et! Ipsa, maiores, ratione.
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
-    <br>
+        </div>
+    </section>
 </a>
 <br>
 <br>
@@ -306,25 +188,70 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <h1 style="text-align: center">
+                <h1 style="text-align: center" data-sal="slide-up" data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300" data-sal-duration="1100">
                     Venue
                 </h1>
-                <h4><i class="fa fa-map-marker-alt">&nbsp;</i>
+                <h4 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
+                    <i class="fa fa-map-marker-alt">&nbsp;</i>
                     Address: </h4>
-                <p>Vishwakarma Institute Of Inforamtion Technology Survey no 2/3/4 Kondhawa(Bk), Pune -48</p>
-                <h4><i class="fa fa-envelope">&nbsp;</i>
+                <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
+                    Vishwakarma Institute Of Inforamtion Technology Survey no 2/3/4 Kondhawa(Bk), Pune -48</p>
+                <br>
+                <h4 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
+                    <i class="fa fa-envelope">&nbsp;</i>
                     Email: </h4>
-                <p>viitgandharva19@gmail.com</p>
+                <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
+                    viitgandharva19@gmail.com</p>
             </div>
 
             <div class="col-sm-6">
-                <h1>This half will consist Google Maps API</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5401738494324!2d73.8832296900385!3d18.45917563402179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaf41ac81e59%3A0xeedc5be537570702!2sVIIT+College+Of+Engineering!5e0!3m2!1sen!2sin!4v1542291058693"
+                        width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
     <br>
 </a>
 <br>
+<br>
+<br>
+
+
+<footer class="page-footer font-small"
+        style=" text-align: center; color:#fff;background: linear-gradient(135deg, #ff910e 0, #ffa841 100%);padding-top:5vh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 py-2">
+                <div class="mb-5 flex-center" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300"
+                     data-sal-duration="1100">
+                    <a class="fb-ic">
+                        <i class="fab fa-facebook-f white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="tw-ic">
+                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="gplus-ic">
+                        <i class="fab fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="li-ic">
+                        <i class="fab fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="ins-ic">
+                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="pin-ic">
+                        <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3" data-sal="slide-up" data-sal-easing="ease-out-bounce"
+         data-sal-delay="300" data-sal-duration="1100">© 2019 Copyright:
+        <a href="#"> gandharva2019.com</a>
+    </div>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -336,10 +263,12 @@
         integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
 <script src="{% static 'gandharva/js/jquery.countdown.min.js' %}"></script>
-<script src="{% static 'gandharva/js/home.js' %}"></script>
+<script src="{% static 'gandharva/js/sal.js' %}"></script>
 {#<script src="{% static 'gandharva/js/modernizr.custom.js' %}"></script>#}
 <script src="{% static 'gandharva/js/particles.min.js' %}"></script>
 <script src="{% static 'gandharva/js/app.js' %}"></script>
+<script src="{% static 'gandharva/js/slick.min.js' %}"></script>
+<script src="{% static 'gandharva/js/home.js' %}"></script>
 
 </body>
 </html>

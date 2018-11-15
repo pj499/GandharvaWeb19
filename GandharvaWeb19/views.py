@@ -3,61 +3,52 @@ from django.http import HttpResponse
 
 events = [
     {
-        'title': 'Event1',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        'title': 'Mech Events',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'img': 'gandharva/img/deptEvent/mech.jpg'
     },
 
     {
-        'title': 'Event2',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+        'title': 'ENTC Events',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'img': 'gandharva/img/deptEvent/entc.jpg'},
     {
-        'title': 'Event3',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+        'title': 'Comp Events',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'img': 'gandharva/img/deptEvent/comp.jpg'},
     {
-        'title': 'Event4',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
+        'title': 'IT Events',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'img': 'gandharva/img/deptEvent/it.jpg'},
     {
-        'title': 'Event5',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-    {
-        'title': 'Event6',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+        'title': 'Civil Events',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'img': 'gandharva/img/deptEvent/civil.jpg'},
 
 ]
 
 sponsor = [
     {
-        'title': 'Sponsor1',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'RedBull',
+        'logo': 'gandharva/img/sponsors/redbull.png'
     },
     {
-        'title': 'Sponsor2',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'Facebook',
+        'logo': 'gandharva/img/sponsors/facebook.png'
     },
     {
-        'title': 'Sponsor3',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'Google',
+        'logo': 'gandharva/img/sponsors/google.png'
     },
     {
-        'title': 'Sponsor4',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'Github',
+        'logo': 'gandharva/img/sponsors/github.png'
     },
     {
-        'title': 'Sponsor5',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        'title': 'Microsoft',
+        'logo': 'gandharva/img/sponsors/microsoft.png'
     },
-    {
-        'title': 'Sponsor6',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-    },
-    {
-        'title': 'Sponsor7',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-    },
-    {
-        'title': 'Sponsor8',
-        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
-    }
+
 ]
 
 args = {
