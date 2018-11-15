@@ -8,7 +8,7 @@ virtualenv
 
 sudo pip3 install virtualenv
 
-Step 1. Clone the repository
+Step 1. Clone the repository<br>
 Step 2. Inside the main project folder
 source venv/bin/activate
 
