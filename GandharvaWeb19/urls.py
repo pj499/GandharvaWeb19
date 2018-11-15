@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gandharvaApp import views
+from GandharvaWeb19 import views
 
 urlpatterns = [
-    path('',views.index,name="index"),
     path('admin/', admin.site.urls),
+    path('home/', views.home, name='home'),
 ]
+

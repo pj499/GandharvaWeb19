@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4f7eb1cc-24d9-4897-906d-6c8e4c1421f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="3aa3ac33-e2a0-4503-956d-6ef8c5c04b9b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gandharva/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/gandharva/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gandharva/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gandharva/index.html" afterDir="false" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,47 +17,158 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="596147992">
+    <session id="1413344735">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="2" />
+          <entry key="html" value="1" />
+          <entry key="js" value="3" />
+          <entry key="py" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="2" />
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="3" />
+          <entry key="Python" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="1018" />
+          <entry key="html" value="2287" />
+          <entry key="js" value="120" />
+          <entry key="py" value="792" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="1018" />
+          <entry key="HTML" value="2287" />
+          <entry key="JavaScript" value="120" />
+          <entry key="Python" value="792" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="735204970">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="1" />
+          <entry key="py" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="1" />
+          <entry key="Python" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="154" />
+          <entry key="html" value="39" />
+          <entry key="js" value="4" />
+          <entry key="py" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="154" />
+          <entry key="HTML" value="39" />
+          <entry key="JavaScript" value="4" />
+          <entry key="Python" value="24" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1465650583">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="4" />
+<<<<<<< HEAD
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.6" value="1" />
+=======
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.39" value="1" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
           <entry key="project.open.time.9" value="1" />
           <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="10" />
-          <entry key="sqlite3" value="1" />
+          <entry key="css" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="10" />
+          <entry key="CSS" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="357" />
+          <entry key="css" value="129" />
+          <entry key="html" value="250" />
+          <entry key="js" value="35" />
+          <entry key="py" value="151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="357" />
+          <entry key="CSS" value="129" />
+          <entry key="HTML" value="250" />
+          <entry key="JavaScript" value="35" />
+          <entry key="Python" value="151" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GandharvaWeb19/settings.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,62 +183,108 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
               <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/gandharva/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="209" column="49" lean-forward="true" selection-start-line="209" selection-start-column="49" selection-end-line="209" selection-end-column="49" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
               <folding>
-                <element signature="e#638#670#0" expanded="true" />
+                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#a#3;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gandharvaApp/views.py">
+        <entry file="file://$PROJECT_DIR$/GandharvaWeb19/views.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="66">
               <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+=======
+            <state relative-caret-position="484">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <marker date="1542136270768" expanded="true" signature="119:124" ph="..." />
+                <marker date="1542272818017" expanded="true" signature="1524:1528" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gandharvaApp/models.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/gandharva/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="220">
               <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <marker date="1542138884071" expanded="true" signature="82:83" ph="..." />
               </folding>
+=======
+            <state relative-caret-position="-5544">
+              <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
+        <entry file="file://$PROJECT_DIR$/static/gandharva/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="308">
               <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#22#31#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="418">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GandharvaWeb19/wsgi.py">
+        <entry file="file://$PROJECT_DIR$/static/gandharva/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state>
               <folding>
                 <element signature="e#230#239#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="286">
+              <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>f</find>
+      <find>carousel</find>
+      <find>title</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,10 +292,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/static/gandharva/home.css" />
         <option value="$PROJECT_DIR$/GandharvaWeb19/settings.py" />
-        <option value="$PROJECT_DIR$/gandharvaApp/views.py" />
+        <option value="$PROJECT_DIR$/GandharvaWeb19/models.py" />
+        <option value="$PROJECT_DIR$/static/gandharva/js/app.js" />
         <option value="$PROJECT_DIR$/GandharvaWeb19/urls.py" />
-        <option value="$PROJECT_DIR$/gandharvaApp/models.py" />
+        <option value="$PROJECT_DIR$/static/gandharva/css/component.css" />
+        <option value="$PROJECT_DIR$/GandharvaWeb19/views.py" />
+        <option value="$PROJECT_DIR$/static/gandharva/css/home.css" />
+        <option value="$PROJECT_DIR$/static/gandharva/js/home.js" />
+        <option value="$PROJECT_DIR$/templates/gandharva/index.html" />
       </list>
     </option>
   </component>
@@ -142,12 +312,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="16" />
-    <option name="y" value="-28" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="y" value="27" />
+    <option name="width" value="1366" />
+    <option name="height" value="691" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -164,12 +332,43 @@
             <path>
               <item name="GandharvaWeb19" type="b2602c69:ProjectViewProjectNode" />
               <item name="GandharvaWeb19" type="462c0819:PsiDirectoryNode" />
-              <item name="gandharvaApp" type="462c0819:PsiDirectoryNode" />
+              <item name="GandharvaWeb19" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GandharvaWeb19" type="b2602c69:ProjectViewProjectNode" />
               <item name="GandharvaWeb19" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GandharvaWeb19" type="b2602c69:ProjectViewProjectNode" />
               <item name="GandharvaWeb19" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="gandharva" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GandharvaWeb19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GandharvaWeb19" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="gandharva" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GandharvaWeb19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GandharvaWeb19" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="gandharva" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GandharvaWeb19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GandharvaWeb19" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GandharvaWeb19" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GandharvaWeb19" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="gandharva" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -178,10 +377,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/gandharva/css" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -202,7 +407,6 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="GandharvaWeb19.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -226,23 +430,28 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4f7eb1cc-24d9-4897-906d-6c8e4c1421f5" name="Default Changelist" comment="" />
-      <created>1542134137365</created>
+      <changelist id="3aa3ac33-e2a0-4503-956d-6ef8c5c04b9b" name="Default Changelist" comment="" />
+      <created>1542039276566</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1542134137365</updated>
+      <updated>1542039276566</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="691" extended-state="6" />
+    <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24054463" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2840909" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -250,14 +459,20 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49923664" visible="true" weight="0.34262297" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50076336" side_tool="true" weight="0.34300342" />
+=======
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.94483984" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32954547" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,15 +482,36 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/db.sqlite3">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/gandharvaApp/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
+=======
+    <entry file="file://$PROJECT_DIR$/GandharvaWeb19/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gandharvaApp/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/GandharvaWeb19/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
     </entry>
+    <entry file="file://$PROJECT_DIR$/GandharvaWeb19/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/gandharvaApp/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -293,45 +529,91 @@
           <folding>
             <element signature="e#638#670#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/static/gandharva/css/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8932">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gandharvaApp/views.py">
+    <entry file="file://$PROJECT_DIR$/GandharvaWeb19/views.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="66">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+=======
+        <state relative-caret-position="484">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <marker date="1542136270768" expanded="true" signature="119:124" ph="..." />
+            <marker date="1542272818017" expanded="true" signature="1524:1528" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
+=======
+    <entry file="file://$PROJECT_DIR$/static/gandharva/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GandharvaWeb19/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
           <folding>
             <element signature="e#22#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/GandharvaWeb19/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#230#239#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/static/gandharva/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gandharvaApp/models.py">
+    <entry file="file://$PROJECT_DIR$/static/gandharva/css/home.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5544">
+          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/gandharva/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="220">
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+=======
+        <state relative-caret-position="408">
+          <caret line="209" column="49" lean-forward="true" selection-start-line="209" selection-start-column="49" selection-end-line="209" selection-end-column="49" />
+>>>>>>> 1a8fe6f26ebdcd5a77b70a9f9e05d275c0d159fd
           <folding>
-            <marker date="1542138884071" expanded="true" signature="82:83" ph="..." />
+            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#a#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
