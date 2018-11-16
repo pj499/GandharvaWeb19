@@ -12,6 +12,13 @@ h1{
 p{
    font-family: 'Kodchasan', sans-serif;
 }
+
+nav ul li{
+     font-family: 'Kodchasan', sans-serif;
+}
+nav a{
+    font-family: 'Kodchasan', sans-serif;
+}
 .clock {
     position: absolute;
     top: 0;
