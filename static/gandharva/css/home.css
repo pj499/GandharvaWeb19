@@ -7,17 +7,21 @@ body {
 }
 h1{
   font-family: 'Kodchasan', sans-serif;
+  transform: scale(0.9,1);
 }
 
 p{
    font-family: 'Kodchasan', sans-serif;
+   transform: scale(0.9,1);    
 }
 
 nav ul li{
      font-family: 'Kodchasan', sans-serif;
+      transform: scale(0.9,1);
 }
 nav a{
     font-family: 'Kodchasan', sans-serif;
+      transform: scale(0.9,1);
 }
 .clock {
     position: absolute;
@@ -113,6 +117,7 @@ img {
     font-weight: bold;
     font-size: 10vw;
     color: #000;
+      transform: scale(0.9,1);
 }
 
 .eventDiv {
@@ -132,6 +137,7 @@ img {
     color: #fff;
     opacity: 1;
     font-weight: bold;
+      transform: scale(0.9,1);
 }
 
 .eventDescription {
@@ -143,6 +149,7 @@ img {
     color: #fff;
     opacity: 1;
     font-weight: bold;
+      transform: scale(0.9,1);
 }
 
 .eventButtons {
@@ -241,6 +248,7 @@ img {
     font-weight: bold;
      font-family: 'Kodchasan', sans-serif;
     font-size: 10px;
+      transform: scale(0.9,1);
 }
 
 .testimonial {
