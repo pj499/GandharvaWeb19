@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'GandharvaWeb19',
+    'Sponsors',
+    'EventApp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
