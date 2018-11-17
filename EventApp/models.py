@@ -15,11 +15,11 @@ class EventMaster(models.Model):
 
 
 class Department(models.Model):
-    dep_id = models.CharField(max_length=30, primary_key=True)
+    dep_id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=30)
 
 
 class EventDepartment(models.Model):
-    event_dep_id = models.CharField(max_length=30, primary_key=True)
+    event_dep_id = models.IntegerField(primary_key=True)
     event = models.ForeignKey(EventMaster, on_delete=models.CASCADE)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
