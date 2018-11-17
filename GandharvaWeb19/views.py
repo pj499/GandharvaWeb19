@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from Sponsors.models import SponsorMaster
 
 carouselImages = [
     {
@@ -63,29 +63,34 @@ events = [
 
 ]
 
-sponsor = [
-    {
-        'title': 'RedBull',
-        'logo': 'gandharva/img/sponsors/redbull.png'
-    },
-    {
-        'title': 'Facebook',
-        'logo': 'gandharva/img/sponsors/facebook.png'
-    },
-    {
-        'title': 'Google',
-        'logo': 'gandharva/img/sponsors/google.png'
-    },
-    {
-        'title': 'Github',
-        'logo': 'gandharva/img/sponsors/github.png'
-    },
-    {
-        'title': 'Microsoft',
-        'logo': 'gandharva/img/sponsors/microsoft.png'
-    },
 
-]
+# sponsor = [
+#     {
+#         'title': 'RedBull',
+#         'logo': 'gandharva/img/sponsors/redbull.png'
+#     },
+#     {
+#         'title': 'Facebook',
+#         'logo': 'gandharva/img/sponsors/facebook.png'
+#     },
+#     {
+#         'title': 'Google',
+#         'logo': 'gandharva/img/sponsors/google.png'
+#     },
+#     {
+#         'title': 'Github',
+#         'logo': 'gandharva/img/sponsors/github.png'
+#     },
+#     {
+#         'title': 'Microsoft',
+#         'logo': 'gandharva/img/sponsors/microsoft.png'
+#     },
+#
+# ]
+
+sponsor_list = SponsorMaster.objects.all()
+
+sponsor = [{'title': i.sponsor_name, 'logo': i.sponsor_logo} for i in sponsor_list]
 
 args = {
     'events': events,
