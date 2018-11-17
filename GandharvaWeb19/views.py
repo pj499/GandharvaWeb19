@@ -1,6 +1,42 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+
+carouselImages = [
+    {
+        'src': 'gandharva/img/1.jpg'
+    },
+    {
+        'src': 'gandharva/img/2.jpg'
+    },
+    {
+        'src': 'gandharva/img/3.jpg'
+    },
+    {
+        'src': 'gandharva/img/5.jpg'
+    },
+    {
+        'src': 'gandharva/img/6.jpg'
+    },
+    {
+        'src': 'gandharva/img/7.jpg'
+    },
+    {
+        'src': 'gandharva/img/8.jpg'
+    },
+    {
+        'src': 'gandharva/img/9.jpg'
+    },
+    {
+        'src': 'gandharva/img/10.jpg'
+    },
+    {
+        'src': 'gandharva/img/11.jpg'
+    }
+]
+
+
+
 events = [
     {
         'title': 'Mech Events',
@@ -53,7 +89,8 @@ sponsor = [
 
 args = {
     'events': events,
-    'sponsors': sponsor
+    'sponsors': sponsor,
+    'carouselImage': carouselImages
 }
 
 
