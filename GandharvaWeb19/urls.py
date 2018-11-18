@@ -20,4 +20,6 @@ from GandharvaWeb19 import views
 urlpatterns = [
     url('admin/', admin.site.urls),
     url('home/', views.home, name='home'),
+    url('event1/', views.event1, name='event1'),
+    url('category1Event1/', views.category1Event1, name='category1Event1'),
 ]

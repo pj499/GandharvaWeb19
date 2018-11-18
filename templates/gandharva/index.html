@@ -34,7 +34,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for event in events %}
-                        <a class="dropdown-item" href="{{ event.linkTo }}">{{ event.title }}</a>
+                        <a class="dropdown-item" href="{% url event.linkTo %}">{{ event.title }}</a>
                     {% endfor %}
                 </div>
             </li>
@@ -103,7 +103,7 @@
         <p class="eventDescription">
             {{ event.description }}
         </p>
-        <button type="button" class="btn btn-primary eventButtons">Learn More</button>
+        <button type="button" onclick="location.href={% url event.linkTo %};" class="btn btn-primary eventButtons">Learn More</button>
     </div>
     <div class="col-1"></div>
     {% if forloop.counter|divisibleby:2 %}
