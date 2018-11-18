@@ -1,28 +1,43 @@
 @import url('https://fonts.googleapis.com/css?family=Kodchasan');
-
+@import url('https://fonts.googleapis.com/css?family=Lato');
 body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: 'Kodchasan', sans-serif;
+   font-family: 'Lato', sans-serif;
 }
 
 .navbar {
-    background-color: #ff910e !important;
+    background-color: #fff !important;
+    opacity: 0.86;
+
 }
 
 nav .navbar-nav li a {
-    color: white !important;
+    color: black !important;
     font-weight: bold;
+    opacity: 1;
+
 }
 
 .navbar-nav > li > .dropdown-menu {
-    background-color: #ff910e;
+    opacity: 1;
+    background-color: #25ade3;
+
 }
 
 .navbar-nav > li > .dropdown-menu :hover {
-    background-color: #000;
+    background-color: #fff;
+}
+.solid{
+    opacity: 1;
+
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #25ade3 !important;
+    font-weight: bold;
 }
 
 .title{
@@ -101,7 +116,7 @@ nav .navbar-nav li a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098D1;
+    background: #25ade3;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 100%;
