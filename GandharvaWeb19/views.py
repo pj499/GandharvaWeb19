@@ -46,10 +46,14 @@ events = [
     for dep in dep_list
 ]
 
+
+gandharvaDate = '01/01/2019' #mm/dd/yyyy
+
 args = {
     'events': events,
     'sponsors': sponsor,
-    'carouselImage': carouselImages
+    'carouselImage': carouselImages,
+    'gandharvaDate' : gandharvaDate
 }
 
 
