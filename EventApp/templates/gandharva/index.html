@@ -36,7 +36,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for event in events %}
-                        <a class="dropdown-item" href="{% url event.linkTo %}">{{ event.title }}</a>
+                        <a class="dropdown-item" href={% url event.link_to %}>{{ event.name }}</a>
                     {% endfor %}
                 </div>
             </li>
@@ -126,11 +126,11 @@
     <div class="col-sm-4  eventDiv hvr-bounce-to-top"
          style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 100%;height: auto"
          data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
-        <h1 class="eventTitle">{{ event.title }}</h1>
+        <h1 class="eventTitle">{{ event.name }}</h1>
         <p class="eventDescription">
             {{ event.description }}
         </p>
-        <button type="button" onclick="location.href={% url event.linkTo %};" class="btn btn-primary eventButtons">Learn
+        <button type="submit" name="dept" value={{ event.name }} onclick="location.href={% url event.link_to %}"; class="btn btn-primary eventButtons">Learn
             More
         </button>
     </div>
@@ -164,11 +164,11 @@
                             <div class="one-slide white">
                                 <div class="testimonial w-100 h-100  p-3 text-center">
                                     <div class="brand"><img alt="logo"
-                                                            src="{% static sponsor.logo %}" style="width:auto;height:100px;max-width:100px"
+                                                            src="{% static sponsor.sponsor_logo %}" style="width:auto;height:100px;max-width:100px"
                                                             />
                                     </div>
                                     <div class="separator">&nbsp;</div>
-                                    <div class="message text-center text-gray">{{ sponsor.title }}</div>
+                                    <div class="message text-center text-gray">{{ sponsor.sponsor_name }}</div>
                                 </div>
                             </div>
                         {% endfor %}

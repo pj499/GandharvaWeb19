@@ -58,7 +58,7 @@
 <h1 class="title" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ pageTitle }}</h1>
 <br><br>
 <div class="container-fluid">
-    {% for events in category1_events %}
+    {% for events in events %}
         {% if forloop.first %}
             <div class="row">{% endif %}
     <div class="col-sm-4  eventDiv hvr-bounce-to-top"
@@ -68,7 +68,7 @@
         <p class="eventDescription">
             {{ events.description }}
         </p>
-        <button type="button" onclick="location.href='category1Event1';" class="btn btn-primary eventButtons">Learn More</button>
+        <button type="button" onclick="location.href='details';" class="btn btn-primary eventButtons">Learn More</button>
     </div>
     <div class="col-1"></div>
     {% if forloop.counter|divisibleby:2 %}

@@ -19,6 +19,6 @@ from GandharvaWeb19 import views
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url('home/', views.home, name='home'),
-    url(r'^event/', include('EventApp.urls')),
+    url(r'', include('EventApp.urls')),
+    # url(r'^event/', include('EventApp.urls')),
 ]

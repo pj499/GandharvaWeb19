@@ -1,46 +1,41 @@
 from django.shortcuts import render
-from EventApp.models import Department,EventMaster
-
+from EventApp.models import Department, EventMaster, Carousel, SponsorMaster
 # Create your views here.
 
 
-dep_list = Department.objects.all()
-
-events = [
-    {'title': dep.name+' Events', 'description': dep.description, 'img': dep.img, 'linkTo': dep.link_to}
-    for dep in dep_list
-]
-
-
-events_list = EventMaster.objects.all()
-category1_events = [
-    {
-        'title': eve.event_name,
-        'description': eve.objective,
-        'img': 'events/img/mech.jpg',
-        'linkTo': 'category1Event1'
+def home(request):
+    args = {
+        'events': Department.objects.all(),
+        'sponsors': SponsorMaster.objects.all(),
+        'carouselImage': Carousel.objects.all(),
+        'gandharvaDate': '01/01/2019'
     }
-    for eve in events_list
-]
-
-args1 = {
-    'pageTitle': 'Events Category',
-    'category1_events': category1_events,
-    'events': events,
-}
-
-args2 = {
-    'pageTitle': 'Blind Coding',
-    'category1_events': category1_events,
-    'events': events,
-    'rules': EventMaster.objects.get(event_name='Blind Coding').rules.split('. '),
-    'blind_coding': EventMaster.objects.get(event_name='Blind Coding')
-}
+    return render(request, 'gandharva/index.html', args)
 
 
 def event(request):
+    dept = "Events"
+    events_list = EventMaster.objects.all()
+    events = [
+        {
+            'title': eve.event_name,
+            'description': eve.objective,
+            'img': 'events/img/mech.jpg',
+            'linkTo': 'category1Event1'
+        }
+        for eve in events_list
+    ]
+
+    args1 = {
+        'pageTitle': dept,
+        'events': events,
+    }
     return render(request, 'events/event1.html', args1)
 
 
-def category1Event1(request):
-    return render(request, 'events/category1Event1.html', args2)
+def details(request):
+    arg = {
+        'event': EventMaster.objects.get(event_id=1),
+        'rules': EventMaster.objects.get(event_id=1).rules.split('. '),
+    }
+    return render(request, 'events/category1Event1.html', arg)

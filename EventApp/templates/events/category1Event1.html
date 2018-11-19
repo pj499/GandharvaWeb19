@@ -53,21 +53,21 @@
     </div>
 </nav>
 <br><br>
-<h1 class="title" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ pageTitle }}</h1>
+<h1 class="title" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ event.event_name }}</h1>
 <br>
 <div class="container">
     <h1 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">Objective</h1>
-    <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ blind_coding.objective }}</p>
+    <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ event.objective }}</p>
 </div>
 <br>
 <div class="container">
     <h1 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">Round 1</h1>
-    <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ blind_coding.round1 }}</p>
+    <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ event.round1 }}</p>
 </div>
 <br>
 <div class="container">
     <h1 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">Round 2</h1>
-    <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ blind_coding.round2 }}</p>
+    <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ event.round2 }}</p>
 </div>
 <br>
 <div class="container">
@@ -81,7 +81,7 @@
 <br>
 <div class="container">
     <h1 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">Team and Fee Structure</h1>
-    <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">Max {{ blind_coding.team_size }} Participants per Team & ₹ {{blind_coding.entry_fee}} per team.</p>
+    <p data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">Max {{ event.team_size }} Participants per Team & ₹ {{event.entry_fee}} per team.</p>
 </div>
 <br><br>
 <footer class="page-footer font-small"

@@ -30,7 +30,6 @@ ALLOWED_HOSTS = ['127.0.0.1','gandharva19.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'GandharvaWeb19',
-    'Sponsors',
     'EventApp',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -118,5 +117,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, "EventApp/static")
 ]
