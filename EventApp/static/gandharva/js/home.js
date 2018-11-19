@@ -2,14 +2,6 @@ console.log('Hello');
 
 sal();
 
-$("#timer")
-    .countdown("2019/01/19", function (event) {
-        $(this).text(
-            event.strftime('%D days %H:%M:%S')
-        );
-    });
-
-
 $(document).ready(function () {
     $(".testimonial-carousel").slick({
         infinite: !0,

@@ -20,8 +20,7 @@ def event(request):
         {
             'title': eve.event_name,
             'description': eve.objective,
-            'img': 'events/img/mech.jpg',
-            'linkTo': 'category1Event1'
+            'linkTo': 'details'
         }
         for eve in events_list
     ]
