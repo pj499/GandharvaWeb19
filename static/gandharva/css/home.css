@@ -55,11 +55,11 @@ nav .navbar-nav li a {
     font-size: 4.6vw;
     text-align: center;
     color: #fff;
-    /*background-color: rgba(0,0,0,0.3);*/
+    background-color: rgba(0,0,0,0.3);
 }
 
 .clock h1 {
-    padding-top: 30vh;
+    padding-top: 20vh;
     z-index: 300;
      font-size: 4.6vw;
     font-weight: bold;

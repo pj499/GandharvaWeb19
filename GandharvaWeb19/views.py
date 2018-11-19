@@ -132,6 +132,7 @@ blind_coding_rules = [
     'Team members may be from different colleges / institutions but one participant may not be a part of multiple teams for the same event.']
 
 
+gandharvaDate = '01/01/2019' #mm/dd/yyyy
 
 sponsor_list = SponsorMaster.objects.all()
 sponsor = [{'title': i.sponsor_name, 'logo': i.sponsor_logo} for i in sponsor_list]
@@ -139,7 +140,8 @@ sponsor = [{'title': i.sponsor_name, 'logo': i.sponsor_logo} for i in sponsor_li
 args = {
     'events': events,
     'sponsors': sponsor,
-    'carouselImage': carouselImages
+    'carouselImage': carouselImages,
+    'gandharvaDate' : gandharvaDate
 }
 
 args1 = {

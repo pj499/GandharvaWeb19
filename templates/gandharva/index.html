@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/home.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/slick.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/sal.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/countdown.css' %}">
+
 </head>
 <body>
 
@@ -80,8 +82,32 @@
                     <div id="particles-js"></div>
                 </div>
                 <h1 style="z-index: 300; color:#ffe680">Gandharva 2019</h1>
-                <div style="z-index: 300;color:#ffe680;padding-bottom:0.5vh"
-                     id="timer" class="timerText"></div>
+                <div class="row cd100" style="margin: 4vw;z-index: -10;" id="countdowntimer">
+                    <div class="col">
+                       <div style="margin: 2vw;  box-sizing: border-box;  border: 3px solid white;border-radius: 50%;background-color:rgba(0,0,0,0.5)" >
+                        <h2 id="day" class="l2-txt1 p-b-9 days" style="font-weight: bold;padding:2vw;"></h2>
+                        <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Days</h2>
+                    </div>
+                    </div>
+                      <div class="col">
+                          <div  style="margin: 2vw; box-sizing: border-box;  border: 3px solid white;border-radius: 50%;background-color:rgba(0,0,0,0.5)">
+                        <h2 id="hour" class="l2-txt1 p-b-9 hours" style="font-weight: bold;padding:2vw";></h2>
+                        <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Hrs</h2>
+                    </div>
+                      </div>
+                      <div class="col">
+                          <div  style="margin: 2vw; box-sizing: border-box;  border: 3px solid white;border-radius: 50%;background-color:rgba(0,0,0,0.5)">
+                        <h2 id="min" class="l2-txt1 p-b-9 minutes" style="font-weight: bold;padding:2vw"></h2>
+                        <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Min</h2>
+                    </div>
+                      </div>
+                      <div class="col">
+                           <div  style="margin: 2vw; box-sizing: border-box;  border: 3px solid white;border-radius: 50%;background-color:rgba(0,0,0,0.5)">
+                        <h2 id="sec" class="l2-txt1 p-b-9 seconds" style="font-weight: bold;padding:2vw"></h2>
+                        <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Sec</h2>
+                    </div>
+                      </div>
+                </div>
             </div>
         </div>
     </div>
@@ -213,7 +239,6 @@
         <a href="#"> gandharva2019.com</a>
     </div>
 </footer>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -229,15 +254,43 @@
 <script src="{% static 'gandharva/js/app.js' %}"></script>
 <script src="{% static 'gandharva/js/slick.min.js' %}"></script>
 <script src="{% static 'gandharva/js/home.js' %}"></script>
+<script src="{% static 'gandharva/js/countdowntime.js' %}"></script>
+<script>
+    var date1 = new Date();
+    var date2 = new Date("{{ gandharvaDate }}"); //mm/dd/yyyy
+    var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+    if (date1.getTime() >= date2.getTime()) {
+        document.getElementById('countdowntimer').style.display = "none";
+    } else {
+        msToTime(timeDiff);
+    }
 
-{#<script>#}
-{#    $("#timer")#}
-{#    .countdown("{{ timerDate }}", function (event) {#}
-{#        $(this).text(#}
-{#            event.strftime('%D days %H:%M:%S')#}
-{#        );#}
-{#    });#}
-{##}
-{#</script>#}
+    function msToTime(duration) {
+        var milliseconds = parseInt((duration % 1000) / 100),
+            seconds = parseInt((duration / 1000) % 60),
+            minutes = parseInt((duration / (1000 * 60)) % 60),
+            hours = parseInt((duration / (1000 * 60 * 60)) % 24);
+        var days = Math.floor((duration / (1000 * 60 * 60 * 24)));
+
+        days = (days < 10) ? "0" + days : days;
+        hours = (hours < 10) ? "0" + hours : hours;
+        minutes = (minutes < 10) ? "0" + minutes : minutes;
+        seconds = (seconds < 10) ? "0" + seconds : seconds;
+        document.getElementById('day').innerHTML = days;
+        document.getElementById('hour').innerHTML = hours;
+        document.getElementById('min').innerHTML = minutes;
+        document.getElementById('sec').innerHTML = seconds;
+
+        $('.cd100').countdown100({
+            endtimeYear: 0,
+            endtimeMonth: 0,
+            endtimeDate: days,
+            endtimeHours: hours,
+            endtimeMinutes: minutes,
+            endtimeSeconds: seconds,
+            timeZone: ""
+        });
+}
+  </script>
 </body>
 </html>
