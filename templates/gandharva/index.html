@@ -56,7 +56,7 @@
     </div>
 </nav>
 
-<div class="container-fluid" style="background-color: rgba(0,0,0,0.3); padding:0">
+<div class="container-fluid" style="background-color: rgba(0,0,0,0.8); padding:0;height: auto">
     <div class="row">
         <div class="col-12">
             <div id="carouselExampleSlidesOnly" class="carousel slide"  data-ride="carousel"
@@ -81,28 +81,28 @@
                 <div id="particle">
                     <div id="particles-js"></div>
                 </div>
-                <h1 style="z-index: 300; color:#ffe680">Gandharva 2019</h1>
-                <div class="row cd100" style="margin: 4vw;z-index: -10;" id="countdowntimer">
+                <h1>Gandharva 2019</h1>
+                <div class="row cd100" style="margin:6vw;" id="countdowntimer">
                     <div class="col">
-                       <div style="margin: 2vw;  box-sizing: border-box;  border: 3px solid white;border-radius: 50%;background-color:rgba(0,0,0,0.5)" >
+                       <div style="margin:1vw;" >
                         <h2 id="day" class="l2-txt1 p-b-9 days" style="font-weight: bold;padding:2vw;"></h2>
                         <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Days</h2>
                     </div>
                     </div>
                       <div class="col">
-                          <div  style="margin: 2vw; box-sizing: border-box;  border: 3px solid white;border-radius: 50%;background-color:rgba(0,0,0,0.5)">
+                          <div  style="margin: 1vw;">
                         <h2 id="hour" class="l2-txt1 p-b-9 hours" style="font-weight: bold;padding:2vw";></h2>
                         <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Hrs</h2>
                     </div>
                       </div>
                       <div class="col">
-                          <div  style="margin: 2vw; box-sizing: border-box;  border: 3px solid white;border-radius: 50%;background-color:rgba(0,0,0,0.5)">
+                          <div  style="margin: 1vw;">
                         <h2 id="min" class="l2-txt1 p-b-9 minutes" style="font-weight: bold;padding:2vw"></h2>
                         <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Min</h2>
                     </div>
                       </div>
                       <div class="col">
-                           <div  style="margin: 2vw; box-sizing: border-box;  border: 3px solid white;border-radius: 50%;background-color:rgba(0,0,0,0.5)">
+                           <div  style="margin: 1vw;">
                         <h2 id="sec" class="l2-txt1 p-b-9 seconds" style="font-weight: bold;padding:2vw"></h2>
                         <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Sec</h2>
                     </div>
@@ -116,14 +116,14 @@
 <br><br>
 <div id="eventsSection"></div>
 <br>
-<div class="container-fluid parallax" style=" background-image: url('{% static 'gandharva/img/p.jpg' %}');">
-    <h1  style="text-align: center;padding-top: 4vh;color: #fff" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">
+<div class="container-fluid">
+    <h1  style="text-align: center;padding-top: 4vh;" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">
     Events</h1>
     <br>
     {% for event in events %}
         {% if forloop.first %}
             <div class="row">{% endif %}
-    <div class="col-sm-4  eventDiv hvr-bounce-to-top"
+    <div class="col-sm-3  eventDiv hvr-bounce-to-top"
          style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 100%;height: auto"
          data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
         <h1 class="eventTitle">{{ event.title }}</h1>
@@ -134,8 +134,7 @@
             More
         </button>
     </div>
-    <div class="col-1"></div>
-    {% if forloop.counter|divisibleby:2 %}
+    {% if forloop.counter|divisibleby:3 %}
         </div>
         <div class="row">{% endif %}
     {% if forloop.last %}
@@ -145,7 +144,7 @@
 </div>
 <br><br><br>
 <div id="sponsorSection"></div>
-<section class="orange-fade p-5 margin-top-xl pos-r">
+<section class="orange-fade p-5 margin-top-xl pos-r parallax" style="padding:0; background-image: url('{% static 'gandharva/img/p.jpg' %}');">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -213,29 +212,29 @@
 <br>
 <br>
 <footer class="page-footer font-small"
-        style=" text-align: center; color:#fff;background-color:#222222; padding-top:5vh">
+        style=" text-align: center; color:#fff;background-color:#222222; padding-top:2vh">
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="font-size: 22px">
-                <div class="mb-5 flex-center" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300"
+                <div class="mb-0 flex-center" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300"
                      data-sal-duration="1100">
                     <a class="fb-ic" href="https://www.facebook.com/viitgandharva/" target="_blank">
-                        <i class="fab fa-facebook-f white-text mr-md-5 mr-3 fa-2x" style="color: #fff"> </i>
+                        <i class="fab fa-facebook-f white-text  fa-2x" style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
                     </a>
                     <a class="tw-ic" href="https://mobile.twitter.com/gandharva_18" target="_blank">
-                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" style="color: #fff"> </i>
+                        <i class="fab fa-twitter fa-lg white-text fa-2x" style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
                     </a>
                     <a class="ins-ic" href="https://www.instagram.com/viitgandharva/" target="_blank">
-                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" style="color:#fff"> </i>
+                        <i class="fab fa-instagram fa-lg white-text fa-2x" style="color:#fff;font-size: 26px;margin-right:2vw"> </i>
                     </a>
                     <a class="pin-ic" href="https://www.youtube.com/channel/UCdtq-lCC25RpJIjSPCIR9Nw/featured" target="_blank">
-                        <i class="fab fa-youtube fa-lg white-text fa-2x" style="color: #fff"> </i>
+                        <i class="fab fa-youtube fa-lg white-text fa-2x" style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer-copyright text-center" style="font-size: 22px;padding-bottom: 2vh">© 2019 Copyright:
+    <div class="footer-copyright text-center" style="font-size:16px;padding-bottom: 2vh">© 2019 Copyright:
         <a href="#"> gandharva2019.com</a>
     </div>
 </footer>

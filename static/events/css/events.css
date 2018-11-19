@@ -5,18 +5,19 @@ body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-   font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif;
+    background-color: #f2f2f2;
 }
 
 .navbar {
-    background-color: #fff !important;
+    background-color: #bfbfbf !important;
     opacity: 0.86;
+
 
 }
 
 nav .navbar-nav li a {
-    color: black !important;
-    font-weight: bold;
+    color: #000000 !important;
     opacity: 1;
 
 }
@@ -30,14 +31,14 @@ nav .navbar-nav li a {
 .navbar-nav > li > .dropdown-menu :hover {
     background-color: #fff;
 }
-.solid{
+
+.solid {
     opacity: 1;
 
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: #25ade3 !important;
-    font-weight: bold;
 }
 
 .title{
@@ -48,9 +49,10 @@ nav .navbar-nav li a {
 
 .eventDiv {
     z-index: 10;
-    background-color: #b380ff;
-    margin-left: 8vw;
-    margin-bottom: 6vh;
+    background-color: #222222;
+    margin-bottom: 8vh;
+    margin-left: auto;
+    margin-right: auto;
     opacity: 0.84;
 }
 
@@ -142,12 +144,7 @@ nav .navbar-nav li a {
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {  
-    .eventDiv {
-        margin-left: 2vw;
-        margin-right: 4.6vw;
-    }
-
+@media only screen and (max-width: 600px) {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
