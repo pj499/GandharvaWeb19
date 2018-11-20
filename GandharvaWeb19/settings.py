@@ -24,7 +24,7 @@ SECRET_KEY = '^)ef3%8r$&327z%qz92yxgcxt6m@4s8j7$czx%5r6140^zh&g4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','gandharva19.pythonanywhere.com','192.168.43.139 ','0.0.0.0','localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'gandharva19.pythonanywhere.com', '192.168.43.139 ', '0.0.0.0', 'localhost']
 
 # Application definition
 
@@ -116,6 +116,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "EventApp/static")
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "EventApp/static")
+# ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
