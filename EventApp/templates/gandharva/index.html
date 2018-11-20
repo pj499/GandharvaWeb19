@@ -38,7 +38,7 @@
                     {% for event in events %}
                         <form method="post" action={% url event.link_to %}>
                             {% csrf_token %}
-                            <input type="hidden" name="dept" value={{ event.name }}/>
+                            <input type="hidden" name="dept" value={{ event.name }}>
                             <button type="submit" class="dropdown-item">{{ event.name }}</button>
                         </form>
 
@@ -138,7 +138,7 @@
             </p>
             <form method="post" action={% url event.link_to %}>
                 {% csrf_token %}
-                <input type="hidden" name="dept" value={{ event.name }}/>
+                <input type="hidden" name="dept" value={{ event.name }} >
                 <button type="submit" class="btn btn-primary eventButtons">Learn
                     More
                 </button>
