@@ -14,7 +14,10 @@ def home(request):
 
 
 def event(request):
-    dept = request.POST.get('dept') + ' Events'
+    if request.POST:
+        dept = request.POST.get('dept') + ' Events'
+    else:
+        dept = 'All Events'
     args1 = {
         'pageTitle': dept,
         'events': EventMaster.objects.all(),
