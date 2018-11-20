@@ -12,4 +12,4 @@ Steps :
 2) Inside the main project folder
 ```source venv/bin/activate```
 3) python3 manage.py runserver
-4) Open http://127.0.0.1:8000/home/ in the browser.
+4) Open http://127.0.0.1:8000/ in the browser.
