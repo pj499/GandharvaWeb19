@@ -13,7 +13,6 @@ body {
     background-color: #bfbfbf !important;
     opacity: 0.86;
 
-
 }
 
 nav .navbar-nav li a {
@@ -43,12 +42,11 @@ nav .navbar-nav li a {
 
 .clock {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
     height: auto;
     z-index: 100;
-    font-weight: bold;
     font-size: 4.6vw;
     text-align: center;
     color: #fff;
@@ -58,8 +56,10 @@ nav .navbar-nav li a {
     padding-top: 16vh;
     z-index: 300;
     color: #fff;
-    font-size: 4.6vw;
+    margin: 2vw;
     font-weight: bold;
+    word-wrap: break-word;
+    font-size: 4.6vw;
     text-align: center;
 }
 
@@ -72,7 +72,6 @@ nav .navbar-nav li a {
     .timerText {
         font-size: 2.8em;
     }
-
 
     .carousel-item img {
         height: 200px;
@@ -139,7 +138,6 @@ img {
     text-align: center;
     z-index: 300;
     color: #fff;
-    font-weight: bold;
     font-size: 10vw;
     color: #000;
 }
@@ -167,8 +165,10 @@ img {
     padding-bottom: 2vh;
     padding-left: 2vw;
     color: #fff;
-    opacity: 1;
     font-weight: bold;
+    opacity: 1;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .eventDescription {
@@ -275,6 +275,7 @@ img {
     color: #363636;
     font-weight: bold;
     font-size: 10px;
+    word-wrap: break-word;
 }
 
 .testimonial {

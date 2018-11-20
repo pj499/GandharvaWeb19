@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Kodchasan');
 @import url('https://fonts.googleapis.com/css?family=Lato');
+
 body {
     overflow-x: hidden;
     margin: 0;
@@ -12,7 +13,6 @@ body {
 .navbar {
     background-color: #bfbfbf !important;
     opacity: 0.86;
-
 
 }
 
@@ -41,10 +41,11 @@ nav .navbar-nav li a {
     color: #25ade3 !important;
 }
 
-.title{
+.title {
     text-align: center;
     font-weight: bold;
     margin-top: 50px;
+    word-wrap: break-word;
 }
 
 .eventDiv {
@@ -64,7 +65,8 @@ nav .navbar-nav li a {
     color: #fff;
     opacity: 1;
     font-weight: bold;
-
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .eventDescription {
@@ -142,7 +144,6 @@ nav .navbar-nav li a {
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }
@@ -154,7 +155,7 @@ nav .navbar-nav li a {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-   
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
