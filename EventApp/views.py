@@ -25,6 +25,7 @@ def event(request):
 def details(request):
     event_name = request.POST.get('event')
     arg = {
+        'pageTitle': EventMaster.objects.get(event_name__startswith=event_name).event_name,
         'event': EventMaster.objects.get(event_name__startswith=event_name),
         'rules': EventMaster.objects.get(event_id=1).rules.split('. '),
     }
