@@ -14,7 +14,7 @@ def home(request):
 
 
 def event(request):
-    dept = "Events"
+    dept = request.POST.get('dept') + ' Events'
     args1 = {
         'pageTitle': dept,
         'events': EventMaster.objects.all(),
@@ -23,8 +23,9 @@ def event(request):
 
 
 def details(request):
+    event_name = request.POST.get('event')
     arg = {
-        'event': EventMaster.objects.get(event_id=1),
+        'event': EventMaster.objects.get(event_name__startswith=event_name),
         'rules': EventMaster.objects.get(event_id=1).rules.split('. '),
     }
     return render(request, 'events/category1Event1.html', arg)

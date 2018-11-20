@@ -33,7 +33,12 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for event in events %}
-                        <a class="dropdown-item" href="{{ event.linkTo }}">{{ event.title }}</a>
+                        <form method="post" action={% url event.linkTo %}>
+                            {% csrf_token %}
+                            <input type="hidden" name="event" value={{ event.event_name }} />
+                            <button type="submit" class="dropdown-item" >{{ event.title }}</button>
+                        </form>
+
                     {% endfor %}
                 </div>
             </li>

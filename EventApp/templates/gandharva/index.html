@@ -36,7 +36,12 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for event in events %}
-                        <a class="dropdown-item" href={% url event.link_to %}>{{ event.name }}</a>
+                        <form method="post" action={% url event.link_to %}>
+                            {% csrf_token %}
+                            <input type="hidden" name="dept" value={{ event.name }} />
+                            <button type="submit" class="dropdown-item" >{{ event.name }}</button>
+                        </form>
+
                     {% endfor %}
                 </div>
             </li>
@@ -130,9 +135,14 @@
         <p class="eventDescription">
             {{ event.description }}
         </p>
-        <button type="submit" name="dept" value={{ event.name }} onclick="location.href={% url event.link_to %}"; class="btn btn-primary eventButtons">Learn
+        <form method="post" action={% url event.link_to %} >
+            {% csrf_token %}
+            <input type="hidden" name="dept" value={{ event.name}} />
+            <button type="submit"  class="btn btn-primary eventButtons">Learn
             More
         </button>
+        </form>
+
     </div>
     {% if forloop.counter|divisibleby:3 %}
         </div>
