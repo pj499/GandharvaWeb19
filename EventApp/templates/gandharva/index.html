@@ -38,8 +38,8 @@
                     {% for event in events %}
                         <form method="post" action={% url event.link_to %}>
                             {% csrf_token %}
-                            <input type="hidden" name="dept" value={{ event.name }} />
-                            <button type="submit" class="dropdown-item" >{{ event.name }}</button>
+                            <input type="hidden" name="dept" value={{ event.name }}/>
+                            <button type="submit" class="dropdown-item">{{ event.name }}</button>
                         </form>
 
                     {% endfor %}
@@ -64,13 +64,13 @@
 <div class="container-fluid" style="background-color: rgba(0,0,0,0.8); padding:0;height: auto">
     <div class="row">
         <div class="col-12">
-            <div id="carouselExampleSlidesOnly" class="carousel slide"  data-ride="carousel"
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"
                  data-interval="4000">
                 <div class="carousel-inner">
                     {% for carouselImg in carouselImage %}
                         {% if forloop.first %}
                             <div class="carousel-item active">
-                                <img class="d-block w-100 img-fluid"  src="{% static carouselImg.src %}"
+                                <img class="d-block w-100 img-fluid" src="{% static carouselImg.src %}"
                                      alt="carouselImages">
                             </div>
                         {% else %}
@@ -89,29 +89,29 @@
                 <h1>Gandharva 2019</h1>
                 <div class="row cd100" style="margin:6vw;" id="countdowntimer">
                     <div class="col">
-                       <div style="margin:1vw;" >
-                        <h2 id="day" class="l2-txt1 p-b-9 days" style="font-weight: bold;padding:2vw;"></h2>
-                        <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Days</h2>
+                        <div style="margin:1vw;">
+                            <h2 id="day" class="l2-txt1 p-b-9 days" style="font-weight: bold;padding:2vw;"></h2>
+                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Days</h2>
+                        </div>
                     </div>
+                    <div class="col">
+                        <div style="margin: 1vw;">
+                            <h2 id="hour" class="l2-txt1 p-b-9 hours" style="font-weight: bold;padding:2vw" ;></h2>
+                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Hrs</h2>
+                        </div>
                     </div>
-                      <div class="col">
-                          <div  style="margin: 1vw;">
-                        <h2 id="hour" class="l2-txt1 p-b-9 hours" style="font-weight: bold;padding:2vw";></h2>
-                        <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Hrs</h2>
+                    <div class="col">
+                        <div style="margin: 1vw;">
+                            <h2 id="min" class="l2-txt1 p-b-9 minutes" style="font-weight: bold;padding:2vw"></h2>
+                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Min</h2>
+                        </div>
                     </div>
-                      </div>
-                      <div class="col">
-                          <div  style="margin: 1vw;">
-                        <h2 id="min" class="l2-txt1 p-b-9 minutes" style="font-weight: bold;padding:2vw"></h2>
-                        <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Min</h2>
+                    <div class="col">
+                        <div style="margin: 1vw;">
+                            <h2 id="sec" class="l2-txt1 p-b-9 seconds" style="font-weight: bold;padding:2vw"></h2>
+                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Sec</h2>
+                        </div>
                     </div>
-                      </div>
-                      <div class="col">
-                           <div  style="margin: 1vw;">
-                        <h2 id="sec" class="l2-txt1 p-b-9 seconds" style="font-weight: bold;padding:2vw"></h2>
-                        <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Sec</h2>
-                    </div>
-                      </div>
                 </div>
             </div>
         </div>
@@ -119,103 +119,113 @@
 </div>
 <br>
 <br><br>
-<div id="eventsSection"></div>
-<br>
-<div class="container-fluid">
-    <h1  style="text-align: center;padding-top: 4vh;" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">
-    Events</h1>
+<div id="eventsSection">
     <br>
-    {% for event in events %}
-        {% if forloop.first %}
-            <div class="row">{% endif %}
-    <div class="col-sm-3  eventDiv hvr-bounce-to-top"
-         style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 100%;height: auto"
-         data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
-        <h1 class="eventTitle">{{ event.name }}</h1>
-        <p class="eventDescription">
-            {{ event.description }}
-        </p>
-        <form method="post" action={% url event.link_to %} >
-            {% csrf_token %}
-            <input type="hidden" name="dept" value={{ event.name}} />
-            <button type="submit"  class="btn btn-primary eventButtons">Learn
-            More
-        </button>
-        </form>
+    <div class="container-fluid">
+        <h1 style="text-align: center;padding-top: 4vh;" data-sal="slide-up" data-sal-easing="ease-out-bounce"
+            data-sal-delay="300">
+            Events</h1>
+        <br>
+        {% for event in events %}
+            {% if forloop.first %}
+                <div class="row">{% endif %}
+        <div class="col-sm-3  eventDiv hvr-bounce-to-top"
+             style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 100%;height: auto"
+             data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
+            <h1 class="eventTitle">{{ event.name }}</h1>
+            <p class="eventDescription">
+                {{ event.description }}
+            </p>
+            <form method="post" action={% url event.link_to %}>
+                {% csrf_token %}
+                <input type="hidden" name="dept" value={{ event.name }}/>
+                <button type="submit" class="btn btn-primary eventButtons">Learn
+                    More
+                </button>
+            </form>
 
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">{% endif %}
+        {% if forloop.last %}
+            </div>
+        {% endif %}
+        {% endfor %}
     </div>
-    {% if forloop.counter|divisibleby:3 %}
-        </div>
-        <div class="row">{% endif %}
-    {% if forloop.last %}
-        </div>
-    {% endif %}
-    {% endfor %}
 </div>
 <br><br><br>
-<div id="sponsorSection"></div>
-<section class="orange-fade p-5 margin-top-xl pos-r parallax" style="padding:0; background-image: url('{% static 'gandharva/img/p.jpg' %}');">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="text-center font-weight-bold text-white" data-sal="slide-up"
-                    data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">Our
-                    Sponsors</h2>
-                <p></p>
-                <div class="mt-5 pos-r" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300"
-                     data-sal-duration="1100">
-                    <div class="carousel-controls testimonial-carousel-controls">
-                        <div class="control prev"><i class="fa fa-chevron-left text-white">&nbsp;</i></div>
-                        <div class="control next"><i class="fa fa-chevron-right text-white">&nbsp;</i></div>
-                    </div>
-                    <div class="testimonial-carousel">
-                        {% for sponsor in sponsors %}
-                            <div class="one-slide white">
-                                <div class="testimonial w-100 h-100  p-3 text-center">
-                                    <div class="brand"><img alt="logo"
-                                                            src="{% static sponsor.sponsor_logo %}" style="width:auto;height:100px;max-width:100px"
-                                                            />
+<div id="sponsorSection">
+    <section class="orange-fade p-5 margin-top-xl pos-r parallax"
+             style="padding:0; background-image: url('{% static 'gandharva/img/p.jpg' %}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center font-weight-bold text-white" data-sal="slide-up"
+                        data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">Our
+                        Sponsors</h2>
+                    <p></p>
+                    <div class="mt-5 pos-r" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300"
+                         data-sal-duration="1100">
+                        <div class="carousel-controls testimonial-carousel-controls">
+                            <div class="control prev"><i class="fa fa-chevron-left text-white">&nbsp;</i></div>
+                            <div class="control next"><i class="fa fa-chevron-right text-white">&nbsp;</i></div>
+                        </div>
+                        <div class="testimonial-carousel">
+                            {% for sponsor in sponsors %}
+                                <div class="one-slide white">
+                                    <div class="testimonial w-100 h-100  p-3 text-center">
+                                        <div class="brand"><img alt="logo"
+                                                                src="{% static sponsor.sponsor_logo %}"
+                                                                style="width:auto;height:100px;max-width:100px"
+                                        />
+                                        </div>
+                                        <div class="separator">&nbsp;</div>
+                                        <div class="message text-center text-gray">{{ sponsor.sponsor_name }}</div>
                                     </div>
-                                    <div class="separator">&nbsp;</div>
-                                    <div class="message text-center text-gray">{{ sponsor.sponsor_name }}</div>
                                 </div>
-                            </div>
-                        {% endfor %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 <br>
 <br>
 <br>
-<div id="venueSection"></div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6">
-            <h1 style="text-align: center" data-sal="slide-up" data-sal-easing="ease-out-bounce"
-                data-sal-delay="300" data-sal-duration="1100">
-                Venue
-            </h1>
-            <h4 data-sal="slide-right" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
-                <i class="fa fa-map-marker-alt">&nbsp;</i>
-                Address: </h4>
-            <p data-sal="slide-right" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
-                Vishwakarma Institute Of Inforamtion Technology Survey no 2/3/4 Kondhawa(Bk), Pune -48</p>
-            <br>
-            <h4 data-sal="slide-right" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
-                <i class="fa fa-envelope">&nbsp;</i>
-                Email: </h4>
-            <p data-sal="slide-right" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
-                viitgandharva19@gmail.com</p>
-        </div>
+<div id="venueSection">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 style="text-align: center" data-sal="slide-up" data-sal-easing="ease-out-bounce"
+                    data-sal-delay="300" data-sal-duration="1100">
+                    Venue
+                </h1>
+                <h4 data-sal="slide-right" data-sal-easing="ease-out-bounce" data-sal-delay="300"
+                    data-sal-duration="1100">
+                    <i class="fa fa-map-marker-alt">&nbsp;</i>
+                    Address: </h4>
+                <p data-sal="slide-right" data-sal-easing="ease-out-bounce" data-sal-delay="300"
+                   data-sal-duration="1100">
+                    Vishwakarma Institute Of Inforamtion Technology Survey no 2/3/4 Kondhawa(Bk), Pune -48</p>
+                <br>
+                <h4 data-sal="slide-right" data-sal-easing="ease-out-bounce" data-sal-delay="300"
+                    data-sal-duration="1100">
+                    <i class="fa fa-envelope">&nbsp;</i>
+                    Email: </h4>
+                <p data-sal="slide-right" data-sal-easing="ease-out-bounce" data-sal-delay="300"
+                   data-sal-duration="1100">
+                    viitgandharva19@gmail.com</p>
+            </div>
 
-        <div class="col-sm-6">
-            <iframe data-sal="slide-left" data-sal-easing="ease-out-bounce" data-sal-delay="300"
-                    data-sal-duration="1100"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5401738494324!2d73.8832296900385!3d18.45917563402179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaf41ac81e59%3A0xeedc5be537570702!2sVIIT+College+Of+Engineering!5e0!3m2!1sen!2sin!4v1542291058693"
-                    width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="col-sm-6">
+                <iframe data-sal="slide-left" data-sal-easing="ease-out-bounce" data-sal-delay="300"
+                        data-sal-duration="1100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5401738494324!2d73.8832296900385!3d18.45917563402179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaf41ac81e59%3A0xeedc5be537570702!2sVIIT+College+Of+Engineering!5e0!3m2!1sen!2sin!4v1542291058693"
+                        width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </div>
@@ -229,16 +239,21 @@
                 <div class="mb-0 flex-center" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300"
                      data-sal-duration="1100">
                     <a class="fb-ic" href="https://www.facebook.com/viitgandharva/" target="_blank">
-                        <i class="fab fa-facebook-f white-text  fa-2x" style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
+                        <i class="fab fa-facebook-f white-text  fa-2x"
+                           style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
                     </a>
                     <a class="tw-ic" href="https://mobile.twitter.com/gandharva_18" target="_blank">
-                        <i class="fab fa-twitter fa-lg white-text fa-2x" style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
+                        <i class="fab fa-twitter fa-lg white-text fa-2x"
+                           style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
                     </a>
                     <a class="ins-ic" href="https://www.instagram.com/viitgandharva/" target="_blank">
-                        <i class="fab fa-instagram fa-lg white-text fa-2x" style="color:#fff;font-size: 26px;margin-right:2vw"> </i>
+                        <i class="fab fa-instagram fa-lg white-text fa-2x"
+                           style="color:#fff;font-size: 26px;margin-right:2vw"> </i>
                     </a>
-                    <a class="pin-ic" href="https://www.youtube.com/channel/UCdtq-lCC25RpJIjSPCIR9Nw/featured" target="_blank">
-                        <i class="fab fa-youtube fa-lg white-text fa-2x" style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
+                    <a class="pin-ic" href="https://www.youtube.com/channel/UCdtq-lCC25RpJIjSPCIR9Nw/featured"
+                       target="_blank">
+                        <i class="fab fa-youtube fa-lg white-text fa-2x"
+                           style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
                     </a>
                 </div>
             </div>
@@ -299,7 +314,7 @@
             endtimeSeconds: seconds,
             timeZone: ""
         });
-}
-  </script>
+    }
+</script>
 </body>
 </html>
