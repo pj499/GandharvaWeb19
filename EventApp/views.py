@@ -15,19 +15,9 @@ def home(request):
 
 def event(request):
     dept = "Events"
-    events_list = EventMaster.objects.all()
-    events = [
-        {
-            'title': eve.event_name,
-            'description': eve.objective,
-            'linkTo': 'details'
-        }
-        for eve in events_list
-    ]
-
     args1 = {
         'pageTitle': dept,
-        'events': events,
+        'events': EventMaster.objects.all(),
     }
     return render(request, 'events/event1.html', args1)
 

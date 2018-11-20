@@ -33,7 +33,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for event in events %}
-                        <a class="dropdown-item" href="{% url event.linkTo %}">{{ event.title }}</a>
+                        <a class="dropdown-item" href="{% url 'details' %}">{{ event.event_name }}</a>
                     {% endfor %}
                 </div>
             </li>
@@ -62,9 +62,9 @@
         <div class="col-sm-3  eventDiv hvr-bounce-to-top"
              style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 100%;height: auto"
              data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
-            <h1 class="eventTitle">{{ events.title }}</h1>
+            <h1 class="eventTitle">{{ events.event_name }}</h1>
             <p class="eventDescription">
-                {{ events.description }}
+                {{ events.objective }}
             </p>
             <button type="button" onclick="location.href='details';" class="btn btn-primary eventButtons">Learn
                 More
