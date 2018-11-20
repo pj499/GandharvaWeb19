@@ -24,11 +24,6 @@ Primary use:
     src: url('../fonts/Lato/Lato-Regular.ttf');
 }
 
-@font-face {
-    font-family: Lato-Bold;
-    src: url('../fonts/Lato/Lato-Bold.ttf');
-}
-
 /*//////////////////////////////////////////////////////////////////
 [ RS PLUGIN ]*/
 /*---------------------------------------------*/
@@ -192,32 +187,36 @@ input.input100 {
 
 /*---------------------------------------------*/
 .s2-txt1 {
-    font-family: Lato-Bold;
+    font-family: Lato;
     font-size: 15px;
     line-height: 1.5;
     color: #555555;
+    font-weight: bold;
 }
 
 .s2-txt2 {
-    font-family: Lato-Bold;
+    font-family: Lato;
     font-size: 15px;
     line-height: 1.5;
     color: #fff;
+    font-weight: bold;
 }
 
 .s2-txt3 {
-    font-family: Lato-Regular;
+    font-family: Lato;
     font-size: 14px;
     line-height: 1.5;
     color: #999999;
+    font-weight: bold;
 }
 
 .s2-txt4 {
-    font-family: Lato-Regular;
+    font-family: Lato;
     font-size: 12px;
     line-height: 1;
     color: #fff;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -245,10 +244,11 @@ input.input100 {
 
 /*---------------------------------------------*/
 .l2-txt1 {
-    font-family: Lato-Bold;
+    font-family: Lato;
     font-size: 40px;
     line-height: 1;
     color: #fff;
+    font-weight: bold;
 }
 
 /*==================================================================
