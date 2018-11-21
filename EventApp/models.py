@@ -14,6 +14,9 @@ class EventMaster(models.Model):
     round2 = models.CharField(max_length=300)
     rules = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.event_name
+
 # model for Department
 
 
@@ -23,6 +26,9 @@ class Department(models.Model):
     description = models.TextField()
     img = models.CharField(max_length=200)
     link_to = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
 
 
 class EventDepartment(models.Model):
