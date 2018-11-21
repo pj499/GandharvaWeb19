@@ -1,62 +1,25 @@
+{% extends 'gandharva/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ pageTitle }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
-          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-      <link rel="stylesheet" type="text/css" href="{% static 'events/css/events.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'events/css/slick.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'events/css/sal.css' %}">
-</head>
 
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="{% url 'home' %}">Gandharva 2019</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    Events
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    {% for event in events %}
-                        <form method="post" action={% url 'details' %} >
-                            {% csrf_token %}
-                            <input type="hidden" name="event" value={{ event.event_name }} />
-                            <button type="submit" class="dropdown-item" >{{ event.event_name }}</button>
-                        </form>
+{% block title %}{{ pageTitle }}{% endblock %}
 
-                    {% endfor %}
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#sponsorSection">Sponsors</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#venueSection">Venue</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+{% block btstrap %}
+<link rel="stylesheet" type="text/css" href="{% static 'events/css/events.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'events/css/slick.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'events/css/sal.css' %}">
+{% endblock %}
+
+{% block dropdown %}
+{% for event in events %}
+<form method="post" action={% url 'details' %} >
+{% csrf_token %}
+<input type="hidden" name="event" value={{ event.event_name }}/>
+<button type="submit" class="dropdown-item">{{ event.event_name }}</button>
+</form>
+{% endfor %}
+{% endblock %}
+
+{% block body %}
 <br><br>
     <h1 class="title" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ pageTitle }}</h1>
     <br><br>
@@ -126,8 +89,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
         integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
-    <script src="{% static 'events/js/sal.js' %}"></script>
-    <script src="{% static 'events/js/slick.min.js' %}"></script>
-    <script src="{% static 'events/js/events.js' %}"></script>
-</body>
-</html>
+<script src="{% static 'events/js/sal.js' %}"></script>
+<script src="{% static 'events/js/slick.min.js' %}"></script>
+<script src="{% static 'events/js/events.js' %}"></script>
+{% endblock %}
