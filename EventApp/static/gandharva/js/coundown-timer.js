@@ -6,14 +6,14 @@
 
 		//array of custom settings
 		var settings = { 
-			'date': null,
-			'format': null
+			'date': 'January 21, 2019',
+			'format': 'on'
 		};
 
 		//append the settings array to options
-		if(options) {
-			$.extend(settings, options);
-		}
+		// if(options) {
+		// 	$.extend(settings, options);
+		// }
 		
 		//main countdown function
 		function countdown_proc() {
