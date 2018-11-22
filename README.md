@@ -1,10 +1,10 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/Bublum/GandharvaWeb19/master/EventApp/static/gandharva/images/icons/icon-512x512.png" height="148">
   <h2 align="center">Gandharva19</h2>
-  <p align="center">Repository for Gandharva19<p>
+  <p align="center">Gandharva Event of VIIT College tentatively in March'19<p>
 </p>
 
-Gandharva Event of VIIT College tentatively in March'19
+
 
 ## Steps to run the project
 
