@@ -26,3 +26,4 @@ Location of important files :
 1) Service worker stored at **template root**. This is important as it can only cache files at its scope.
 2) urls.py has been updated to give location of above mentioned service worker.
 3) Service worker has been registered at **base.html**, so that any other page which extends base.html **is also cached**.
+4) Location of app icons at the time of me writing this is ```https://github.com/Bublum/GandharvaWeb19/tree/master/EventApp/static/gandharva/images/icons```
