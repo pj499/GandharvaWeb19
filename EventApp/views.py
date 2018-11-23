@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from EventApp.models import Department, EventMaster, Carousel, SponsorMaster
+
 # Create your views here.
 
 
@@ -8,8 +9,9 @@ def home(request):
         'events': Department.objects.all(),
         'sponsors': SponsorMaster.objects.all(),
         'carouselImage': Carousel.objects.all(),
-        'gandharvaDate': '01/01/2019'
+        'gandharvaDate': 'January 11, 2019'
     }
+
     return render(request, 'gandharva/index.html', args)
 
 

@@ -1,12 +1,13 @@
 (function($) {
+
 	$.fn.countdown = function(options, callback) {
 
 		//custom 'this' selector
 		thisEl = $(this);
 
 		//array of custom settings
-		var settings = { 
-			'date': 'January 21, 2019',
+		var settings = {
+			'date': GandharvaDate,
 			'format': 'on'
 		};
 
@@ -25,9 +26,9 @@
 				callback.call(this);
 				clearInterval(10000);
 			}
-			
+
 			seconds = eventDate - currentDate;
-			
+
 			days = Math.floor(seconds / (60 * 60 * 24)); //calculate the number of days
 			seconds -= days * 60 * 60 * 24; //update the seconds variable with no. of days removed
 			
@@ -68,6 +69,6 @@
 		
 		//loop the function
 		interval = setInterval(countdown_proc, 1000);
-		
+
 	}
 }) (jQuery);
