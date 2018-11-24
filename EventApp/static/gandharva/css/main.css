@@ -739,8 +739,7 @@ h2 {
 **************************/
 
 #footer {
-  background-color: #212121;
-  background-image: url("../images/footer-bg.jpg");
+  background-color: #000000;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;

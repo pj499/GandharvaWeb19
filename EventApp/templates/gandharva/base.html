@@ -2,54 +2,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Home{% endblock %}</title>
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
-          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    {% block btstrap %}
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% block title %}Home{% endblock %}</title>
+		<link href="{%static 'gandharva/css/main.css'%}" rel="stylesheet">
+	    <link href="{%static 'gandharva/css/bootstrap.min.css'%}" rel="stylesheet">
+    <link href="{%static 'gandharva/css/font-awesome.min.css'%}" rel="stylesheet">
+    {% block scripts%}
     {% endblock %}
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <a class="navbar-brand" href="{% url 'home' %}">Gandharva 2019</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    Events
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    {% block dropdown %}
-                    {% endblock %}
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}#sponsorSection">Sponsors</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}#venueSection">Venue</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-{% block body %}
-{% endblock %}
+<header id="header" role="banner">
+		<div class="main-nav">
+			<div class="container">
+				<div class="header-top">
+					<div class="pull-right social-icons">
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+						<a href="#"><i class="fa fa-youtube"></i></a>
+					</div>
+				</div>
+		        <div class="row">
+		            <div class="navbar-header">
+		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		                    <span class="sr-only">Toggle navigation</span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                    <span class="icon-bar"></span>
+		                </button>
+		                <a class="navbar-brand" href=#>
+		                	<img class="img-responsive" src="{% static 'gandharva/images/icons/icon-512x512.png'%}" alt="logo">
+		               Gandharva 2019 </a>
+		            </div>
+		            <div class="collapse navbar-collapse">
+		                <ul class="nav navbar-nav navbar-right">
+		                    <li class="scroll active"><a href="#home">Home</a></li>
+		                    <li class="scroll"><a href="#explore">Explore</a></li>
+		                    <li class="scroll"><a href="#event">Event</a></li>
+		                    <li class="scroll"><a href="#about">About</a></li>
+		                    <li class="no-scroll"><a href="#twitter">Twitter</a></li>
+		                    <li class="scroll"><a href="#contact">Contact</a></li>
+		                </ul>
+		            </div>
+		        </div>
+	        </div>
+        </div>
+    </header>
+    {% block body %}
+    {% endblock %}
+    <footer id="footer">
+        <div class="container">
+            <div class="text-center">
+                <p> Copyright  &copy;2019 Gandharva 2K19 Theme. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

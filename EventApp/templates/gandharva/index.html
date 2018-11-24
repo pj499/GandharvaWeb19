@@ -1,15 +1,8 @@
+{% extends 'gandharva/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Home</title>
-    <link href="{%static 'gandharva/css/bootstrap.min.css'%}" rel="stylesheet">
-    <link href="{%static 'gandharva/css/font-awesome.min.css'%}" rel="stylesheet">
-	<link href="{%static 'gandharva/css/main.css'%}" rel="stylesheet">
+
+    {% block title %}Home{% endblock %}
+	{% block scripts%}
 	<link href="{%static 'gandharva/css/animate.css'%}" rel="stylesheet">
 	<link href="{%static 'gandharva/css/responsive.css'%}" rel="stylesheet">
     <script>
@@ -21,47 +14,9 @@
 	    <script src="{%static 'gandharva/js/html5shiv.js'%}"></script>
 	    <script src="{%static 'gandharva/js/respond.min.js'%}"></script>
     <![endif]-->
-</head><!--/head-->
+	{% endblock %}
 
-<body>
-	<header id="header" role="banner">		
-		<div class="main-nav">
-			<div class="container">
-				<div class="header-top">
-					<div class="pull-right social-icons">
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-google-plus"></i></a>
-						<a href="#"><i class="fa fa-youtube"></i></a>
-					</div>
-				</div>     
-		        <div class="row">	        		
-		            <div class="navbar-header">
-		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		                    <span class="sr-only">Toggle navigation</span>
-		                    <span class="icon-bar"></span>
-		                    <span class="icon-bar"></span>
-		                    <span class="icon-bar"></span>
-		                </button>
-		                <a class="navbar-brand" href=#>
-		                	<img class="img-responsive" src="{% static 'gandharva/images/icons/logo8.png'%}" alt="logo">
-		               Gandharva 2019 </a>
-		            </div>
-		            <div class="collapse navbar-collapse">
-		                <ul class="nav navbar-nav navbar-right">                 
-		                    <li class="scroll active"><a href="#home">Home</a></li>
-		                    <li class="scroll"><a href="#explore">Explore</a></li>                         
-		                    <li class="scroll"><a href="#event">Event</a></li>
-		                    <li class="scroll"><a href="#about">About</a></li>                     
-		                    <li class="no-scroll"><a href="#twitter">Twitter</a></li>
-		                    <li><a class="no-scroll" href="#" target="_blank">PURCHASE TICKETS</a></li>
-		                    <li class="scroll"><a href="#contact">Contact</a></li>       
-		                </ul>
-		            </div>
-		        </div>
-	        </div>
-        </div>                    
-    </header>
+	{% block body %}
     <!--/#header--> 
 
     <section id="home">	
@@ -74,27 +29,12 @@
 			<div class="carousel-inner">
 				<div class="item active">
 					<img class="img-responsive" src="{% static 'gandharva/images/slider/1.jpg'%}" alt="slider">
-					<div class="carousel-caption">
-						<h2>register for our next event </h2>
-						<h4>full event package only @$199</h4>
-						<a href="#contact">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
-					</div>
 				</div>
 				<div class="item">
 					<img class="img-responsive" src="{% static 'gandharva/images/slider/2.jpg'%}" alt="slider">
-					<div class="carousel-caption">
-						<h2>register for our next event </h2>
-						<h4>full event package only @$199</h4>
-						<a href="#contact">GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
-					</div>
 				</div>
 				<div class="item">
 					<img class="img-responsive" src="{% static 'gandharva/images/slider/3.jpg'%}" alt="slider">
-					<div class="carousel-caption">
-						<h2>register for our next event </h2>
-						<h4>full event package only @$199</h4>
-						<a href="#contact" >GRAB YOUR TICKETS <i class="fa fa-angle-right"></i></a>
-					</div>
 				</div>				
 			</div>
 		</div>    	
@@ -295,65 +235,10 @@
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5401738494324!2d73.8832296900385!3d18.45917563402179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaf41ac81e59%3A0xeedc5be537570702!2sVIIT+College+Of+Engineering!5e0!3m2!1sen!2sin!4v1542291058693"
                         width="1350" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div><!--/#map-->
-		<div class="contact-section">
-			<div class="ear-piece">
-				<img class="img-responsive" src="{%static 'gandharva/images/ear-piece.png'%}" alt="">
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-3 col-sm-offset-4">
-						<div class="contact-text">
-							<h3>Contact</h3>
-							<address>
-								E-mail: promo@party.com<br>
-								Phone: +1 (123) 456 7890<br>
-								Fax: +1 (123) 456 7891
-							</address>
-						</div>
-						<div class="contact-address">
-							<h3>Contact</h3>
-							<address>
-								Unit C2, St.Vincent's Trading Est.,<br>
-								Feeder Road,<br>
-								Bristol, BS2 0UY<br>
-								United Kingdom
-							</address>
-						</div>
-					</div>
-					<div class="col-sm-5">
-						<div id="contact-section">
-							<h3>Send a message</h3>
-					    	<div class="status alert alert-success" style="display: none"></div>
-					    	<form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
-					            <div class="form-group">
-					                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
-					            </div>
-					            <div class="form-group">
-					                <input type="email" name="email" class="form-control" required="required" placeholder="Email ID">
-					            </div>
-					            <div class="form-group">
-					                <textarea name="message" id="message" required="required" class="form-control" rows="4" placeholder="Enter your message"></textarea>
-					            </div>                        
-					            <div class="form-group">
-					                <button type="submit" class="btn btn-primary pull-right">Send</button>
-					            </div>
-					        </form>	       
-					    </div>
-					</div>
-				</div>
-			</div>
-		</div>		
+
 	</section>
     <!--/#contact-->
 
-    <footer id="footer">
-        <div class="container">
-            <div class="text-center">
-                <p> Copyright  &copy;2014<a target="_blank" href="http://shapebootstrap.net/"> Gandharva 2K19 </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="http://shapebootstrap.net/">ShapeBootstrap</a></p>
-            </div>
-        </div>
-    </footer>
-    <!--/#footer-->
   
     <script type="text/javascript" src="{%static 'gandharva/js/jquery.js'%}"></script>
     <script type="text/javascript" src="{%static 'gandharva/js/bootstrap.min.js'%}"></script>
@@ -365,5 +250,4 @@
     <script type="text/javascript" src="{% static 'gandharva/js/jquery.scrollTo.js'%}"></script>
     <script type="text/javascript" src="{% static 'gandharva/js/jquery.nav.js'%}"></script>
     <script type="text/javascript" src="{% static 'gandharva/js/main.js'%}"></script>
-</body>
-</html>
+    {% endblock %}
