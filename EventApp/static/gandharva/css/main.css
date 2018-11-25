@@ -359,37 +359,7 @@ h2 {
   width: 1px;
 }
 
-.cart {
-  background-color: #b34534;  
-  position: absolute;
-  right:-200px;
-  top: 37%;
-  width:252px;
-   -webkit-transition: all 0.7s ease-in-out;
-  -moz-transition: all 0.7s ease-in-out;
-  -ms-transition: all 0.7s ease-in-out;
-  -o-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
-}
 
-.cart:hover {
-  right:0;
-}
-
-
-.cart a {
-  color: #FFFFFF;
-  display: block;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.cart a i {
-  font-size: 30px;  
-  padding: 20px 12px;
-  background-color: #A64030; 
-  margin-right: 3px;
-}
 
  
 
@@ -588,61 +558,64 @@ h2 {
 **************************/
 
 #sponsor {
-  background-color: #1881a2;
-  background-image: url("../images/sponsor-bg.jpg");
-  background-position:50% 0;
-  background-size: cover;
-  background-repeat:no-repeat;
+  background-color: #33888F;
+  background-image: url("../images/performar-bg.jpg");
+  background-position: 50% 0;
+  background-size: contain;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+
+#sponsor h2 {
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  margin-top: 70px;
+  text-transform: uppercase;
+}
+
+.single-sponsor {
+  margin-bottom: 70px;
+}
+
+.single-sponsor h4 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 26px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+
+.single-sponsor h5 {
+  font-size: 18px;
+  font-weight: 100;
+  display: block;
+}
+
+#sponsor-carousel {
   position: relative;
 }
 
-.light {
+.even-control-left,
+.even-control-right {
   position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-#sponsor .col-sm-10 {
-  z-index: 10;
-}
-
-#sponsor h2 {
-  margin-top: 90px;
-  margin-bottom: 40px;
-}
-
-#sponsor .item ul {
-  font-size: 0;
-  padding: 0;
-}
-
-
-#sponsor .item ul li {
-  display: inline-block;
-  list-style: none;
-  width: 33.33%;
-  margin-bottom: 75px;
-}
-
-#sponsor .item ul li:last-child {
-  margin-right: 0
-}
-
-.sponsor-control-left, 
-.sponsor-control-right {
-  color: #FFFFFF;
   font-size: 24px;
-  position: absolute;
-  top: 20%;
+  color: #fff;
+  top: 0;
 }
 
-.sponsor-control-left {
-  right: 12%
+.evenr-control-left {
+  right: 3%
 }
 
-.sponsor-control-right {
-  right: 10%
+.even-control-right {
+  right: 0;
 }
+
 
 
 /*************************
@@ -744,7 +717,8 @@ h2 {
 **************************/
 
 #footer {
-  background-color: #000000;
+  background-color: #212121;
+  background-image: url("../images/footer-bg.jpg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
