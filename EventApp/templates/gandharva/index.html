@@ -75,83 +75,51 @@
 	</section><!--/#explore-->
 
 	<section id="event">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-9">
-					<div id="event-carousel" class="carousel slide" data-interval="false">
-						<h2 class="heading">THE ROCKING Performers</h2>
-						<a class="even-control-left" href="#event-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-						<a class="even-control-right" href="#event-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
-						<div class="carousel-inner">
-							<div class="item active">
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="{% static 'gandharva/images/event/4.jpg'%}" alt="event-image">
-											<h4>Chester Bennington</h4>
-											<h5>Vocal</h5>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="{% static 'gandharva/images/event/5.jpg'%}" alt="event-image">
-											<h4>Mike Shinoda</h4>
-											<h5>vocals, rhythm guitar</h5>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="{% static 'gandharva/images/event/6.jpg'%}" alt="event-image">
-											<h4>Rob Bourdon</h4>
-											<h5>drums</h5>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="row">
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="{% static 'gandharva/images/event/1.jpg'%}" alt="event-image">
-											<h4>Chester Bennington</h4>
-											<h5>Vocal</h5>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="{% static 'gandharva/images/event/2.jpg'%}" alt="event-image">
-											<h4>Mike Shinoda</h4>
-											<h5>vocals, rhythm guitar</h5>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div class="single-event">
-											<img class="img-responsive" src="{% static 'gandharva/images/event/3.jpg'%}" alt="event-image">
-											<h4>Rob Bourdon</h4>
-											<h5>drums</h5>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="guitar">
-					<img class="img-responsive" src="{% static 'gandharva/images/guitar.png'%}" alt="guitar">
-				</div>
-			</div>			
-		</div>
+    <br>
+    <div class="container-fluid">
+        <h1 style="text-align: center;padding-top: 4vh;" data-sal="slide-up" data-sal-easing="ease-out-bounce"
+            data-sal-delay="300">
+            Events</h1>
+        <br>
+        {% for event in events %}
+            {% if forloop.first %}
+                <div class="row">{% endif %}
+        <div class="col-sm-3  eventDiv hvr-bounce-to-top"
+             style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 300px;height: 300px"
+             data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
+            <h1 class="eventTitle">{{ event.name }}</h1>
+            <p class="eventDescription">
+                {{ event.description }}
+            </p>
+            <form method="post" action={% url event.link_to %}>
+                {% csrf_token %}
+                <input type="hidden" name="dept" value={{ event.name }} >
+                <button type="submit" class="btn btn-primary eventButtons">Learn
+                    More
+                </button>
+            </form>
+
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">{% endif %}
+        {% if forloop.last %}
+            </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
 	</section><!--/#event-->
 
 	<section id="about">
-		<div class="guitar2">				
+		<div class="guitar2">
 			<img class="img-responsive" src="{% static 'gandharva/images/guitar2.jpg'%}" alt="guitar">
 		</div>
-		<div class="about-content">					
+		<div class="about-content">
 					<h2>About Evento</h2>
 					<p>We have created an extremely positive and relaxed environment all geared towards developing your skills whether you are an absolute beginner trying to get off the ground or an accomplished player looking to move to the next level. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 					<a href="#" class="btn btn-primary">View Date & Place <i class="fa fa-angle-right"></i></a>
-				
+
 		</div>
 	</section><!--/#about-->
 	
@@ -175,7 +143,7 @@
 											<h5>{{sponsor.sponsor_info}}</h5>
 										</div>
 									</div>
-									{% if forloop.counter|divisibleby:3 %}
+									{% if forloop.counter|divisibleby:3  %}
 								</div>
 							</div>
 							<div class="item">
