@@ -103,6 +103,7 @@ nav .navbar-nav li a {
         width: 100%;
         height: auto;
     }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -110,6 +111,7 @@ nav .navbar-nav li a {
     .carousel-item img {
         height: 260px;
     }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -350,7 +352,8 @@ img {
 
 .map-responsive{
     overflow:hidden;
-    padding-bottom:56.25%;
+    padding-top: 10%;
+    padding-bottom:300px;
     position:relative;
     height:0;
 }
