@@ -19,29 +19,65 @@
 {% endblock %}
 
 {% block body %}
-    <!--/#header-->
-    {#Test Comment#}
-    {#    <section id="home">#}
-    {#        <div id="main-slider" class="carousel slide" data-ride="carousel">#}
-    {#            <ol class="carousel-indicators">#}
-    {#                <li data-target="#main-slider" data-slide-to="0" class="active"></li>#}
-    {#                <li data-target="#main-slider" data-slide-to="1"></li>#}
-    {#                <li data-target="#main-slider" data-slide-to="2"></li>#}
-    {#            </ol>#}
-    {#            <div class="carousel-inner">#}
-    {#                <div class="item active">#}
-    {#                    <img class="img-responsive" src="{% static 'gandharva/images/slider/1.jpg' %}" alt="slider">#}
-    {#                </div>#}
-    {#                <div class="item">#}
-    {#                    <img class="img-responsive" src="{% static 'gandharva/images/slider/2.jpg' %}" alt="slider">#}
-    {#                </div>#}
-    {#                <div class="item">#}
-    {#                    <img class="img-responsive" src="{% static 'gandharva/images/slider/3.jpg' %}" alt="slider">#}
-    {#                </div>#}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </section>#}
-    <!--/#home-->
+    <section>
+        <div class="container-fluid" style="background-color: rgba(0,0,0,0.8); padding:0;height: auto;width: 100%">
+            <div class="row">
+                <div class="col-12">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"
+                         data-interval="4000" style="width: 100%;">
+                        <div class="carousel-inner">
+                            {% for carouselImg in carouselImage %}
+                                {% if forloop.first %}
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100 img-fluid" src="{% static carouselImg.src %}"
+                                             alt="carouselImages">
+                                    </div>
+                                {% else %}
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100 img-fluid" src="{% static carouselImg.src %}"
+                                             alt="carouselImages">
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {#            <div class="clock">#}
+                    {#                <div id="particle">#}
+                    {#                    <div id="particles-js"></div>#}
+                    {#                </div>#}
+                    {#                <h1>Gandharva 2019</h1>#}
+                    {#                <div class="row cd100" style="margin:6vw;" id="countdowntimer">#}
+                    {#                    <div class="col">#}
+                    {#                        <div style="margin:1vw;">#}
+                    {#                            <h2 id="day" class="l2-txt1 p-b-9 days" style="font-weight: bold;padding:2vw;"></h2>#}
+                    {#                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Days</h2>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                    <div class="col">#}
+                    {#                        <div style="margin: 1vw;">#}
+                    {#                            <h2 id="hour" class="l2-txt1 p-b-9 hours" style="font-weight: bold;padding:2vw" ;></h2>#}
+                    {#                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Hrs</h2>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                    <div class="col">#}
+                    {#                        <div style="margin: 1vw;">#}
+                    {#                            <h2 id="min" class="l2-txt1 p-b-9 minutes" style="font-weight: bold;padding:2vw"></h2>#}
+                    {#                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Min</h2>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                    <div class="col">#}
+                    {#                        <div style="margin: 1vw;">#}
+                    {#                            <h2 id="sec" class="l2-txt1 p-b-9 seconds" style="font-weight: bold;padding:2vw"></h2>#}
+                    {#                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Sec</h2>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                </div>#}
+                    {#            </div>#}
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section id="explore">
         <div class="container-fluid">
@@ -114,20 +150,28 @@
     </section><!--/#event-->
 
 
-    {#    <section id="about">#}
-    {#        <div class="guitar2">#}
-    {#            <img class="img-fluid" src="{% static 'gandharva/images/guitar2.jpg' %}" alt="guitar">#}
-    {#        </div>#}
-    {#        <div class="about-content">#}
-    {#            <h2>About Evento</h2>#}
-    {#            <p>We have created an extremely positive and relaxed environment all geared towards developing your skills#}
-    {#                whether you are an absolute beginner trying to get off the ground or an accomplished player looking to#}
-    {#                move to the next level. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem#}
-    {#                Ipsum has been the industry's standard dummy text ever since the 1500s</p>#}
-    {#            <a href="#" class="btn btn-primary">View Date & Place <i class="fa fa-angle-right"></i></a>#}
-    {##}
-    {#        </div>#}
-    {#    </section><!--/#about-->#}
+    <section id="about" style="background-color: #75B46E">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img style="margin-top: 4vh" class="img-fluid" src="{% static 'gandharva/images/guitar2.jpg' %}"
+                         alt="guitar">
+                </div>
+                <div class="col-sm-6">
+                    <h2 style="margin-top: 4vh;text-align: center;">About Gandharva</h2>
+                    <p style="margin-top: 4vh;text-align: center">We have created an extremely positive and relaxed
+                        environment all geared towards developing your skills
+                        whether you are an absolute beginner trying to get off the ground or an accomplished player
+                        looking to
+                        move to the next level. Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem
+                        Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <a style="margin-bottom: 4vh" href="#" class="btn btn-primary">View Date & Place <i
+                            class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <div id="sponsorSection">
@@ -230,9 +274,18 @@
     </section>
     <!--/#contact-->
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+            integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+            crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="{% static 'gandharva/js/jquery.js' %}"></script>
-    <script type="text/javascript" src="{% static 'gandharva/js/bootstrap.min.js' %}"></script>
+    {#    <script type="text/javascript" src="{% static 'gandharva/js/jquery.js' %}"></script>#}
+    {#    <script type="text/javascript" src="{% static 'gandharva/js/bootstrap.min.js' %}"></script>#}
     <script type="text/javascript" src="{% static 'gandharva/js/jquery.parallax.js' %}"></script>
     <script type="text/javascript" src="{% static 'gandharva/js/jquery.scrollTo.js' %}"></script>
     <script type="text/javascript" src="{% static 'gandharva/js/jquery.nav.js' %}"></script>
