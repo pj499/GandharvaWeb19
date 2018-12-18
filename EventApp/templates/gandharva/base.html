@@ -7,54 +7,64 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>{% block title %}Home{% endblock %}</title>
-    <link href="{% static 'gandharva/css/main.css' %}" rel="stylesheet">
-    <link href="{% static 'gandharva/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'gandharva/css/font-awesome.min.css' %}" rel="stylesheet">
-    <link href="{% static 'gandharva/css/home.css' %}" rel="stylesheet">
-    <link href="{% static 'gandharva/css/sal.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'gandharva/css/slick.min.css' %}">
+
+
+    {#		<link href="{%static 'gandharva/css/main.css'%}" rel="stylesheet">#}
+    {#	    <link href="{%static 'gandharva/css/bootstrap.min.css'%}" rel="stylesheet">#}
+    {#    <link href="{%static 'gandharva/css/font-awesome.min.css'%}" rel="stylesheet">#}
+
     {% block scripts %}
     {% endblock %}
 
 </head>
 <body>
-<header id="header" role="banner">
-    <div class="main-nav">
-        <div class="container">
-            <div class="header-top">
-                <div class="pull-right social-icons">
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                    <a href="#"><i class="fa fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href=#>
-                        <img class="img-responsive" src="{% static 'gandharva/images/icons/icon-512x512.png' %}"
-                             alt="logo">
-                        Gandharva 2019 </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="scroll active"><a href="{% url 'home' %}#home">Home</a></li>
-                        <li class="scroll"><a href="{% url 'home' %}#explore">Explore</a></li>
-                        <li class="scroll"><a href="{% url 'home' %}#event">Event</a></li>
-                        <li class="scroll"><a href="{% url 'home' %}#about">About</a></li>
-                        <li class="no-scroll"><a href="{% url 'home' %}#sponsor">Sponsors</a></li>
-                        <li class="scroll"><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+{#<header id="header" role="banner">#}
+{#		<div class="main-nav">#}
+{#			<div class="container">#}
+{#				<div class="header-top">#}
+{#					<div class="pull-right social-icons">#}
+{#						<a href="#"><i class="fa fa-twitter"></i></a>#}
+{#						<a href="#"><i class="fa fa-facebook"></i></a>#}
+{#						<a href="#"><i class="fa fa-google-plus"></i></a>#}
+{#						<a href="#"><i class="fa fa-youtube"></i></a>#}
+{#					</div>#}
+{#				</div>#}
+{#		        <div class="row">#}
+{#		            <div class="navbar-header">#}
+{#		                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">#}
+{#		                    <span class="sr-only">Toggle navigation</span>#}
+{#		                    <span class="icon-bar"></span>#}
+{#		                    <span class="icon-bar"></span>#}
+{#		                    <span class="icon-bar"></span>#}
+{#		                </button>#}
+{#		                <a class="navbar-brand" href=#>#}
+{#		                	<img class="img-responsive" src="{% static 'gandharva/images/icons/icon-512x512.png'%}" alt="logo">#}
+{#		               Gandharva 2019 </a>#}
+{#		            </div>#}
+{#		            <div class="collapse navbar-collapse">#}
+{#		                <ul class="nav navbar-nav navbar-right">#}
+{#		                    <li class="scroll active"><a href="{% url 'home' %}#home">Home</a></li>#}
+{#		                    <li class="scroll"><a href="{% url 'home' %}#explore">Explore</a></li>#}
+{#		                    <li class="scroll"><a href="{% url 'home' %}#event">Event</a></li>#}
+{#		                    <li class="scroll"><a href="{% url 'home' %}#about">About</a></li>#}
+{#		                    <li class="no-scroll"><a href="{% url 'home' %}#sponsor">Sponsors</a></li>#}
+{#		                    <li class="scroll"><a href="#contact">Contact</a></li>#}
+{#		                </ul>#}
+{#		            </div>#}
+{#		        </div>#}
+{#	        </div>#}
+{#        </div>#}
+{#    </header>#}
+
+
+
 {% block body %}
 {% endblock %}
 <footer id="footer">

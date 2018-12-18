@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-html,body {
+html, body {
     overflow-x: hidden;
     width: 100%;
     margin: 0px;
@@ -39,6 +39,166 @@ nav .navbar-nav li a {
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: #25ade3 !important;
+}
+
+/*************************
+*******Explore CSS******
+**************************/
+
+#explore {
+    background-color: #C34C39;
+    background-image: url("../images/event-bg.jpg");
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-top: 4vh;
+    padding-bottom: 10vh;
+}
+
+.watch img {
+    position: absolute;
+    left: 0;
+    top: -12px;
+}
+
+#explore h2 {
+    /*font-size: 32px;*/
+    color: #fff;
+    padding-bottom: 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#countdown {
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#countdown li {
+    color: #fff;
+    list-style: none;
+    margin-right: 50px;
+    margin-bottom: 6px;
+    margin-left: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#countdown li:last-child {
+    margin-right: 0;
+}
+
+#countdown li span {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;
+    margin-left: 0;
+    border-radius: 10px;
+    border-right: 1px solid #9e3e2e;
+    border-bottom: 1px solid #9e3e2e;
+}
+
+#countdown li .days {
+    background-color: #45b29d;
+    border-top: 1px solid #6ac1b1;
+    border-left: 1px solid #6ac1b1;
+}
+
+#countdown li .hours {
+    background-color: #efc94c;
+    border-top: 1px solid #f2d470;
+    border-left: 1px solid #f2d470;
+}
+
+#countdown li .minutes {
+    background-color: #e27a3f;
+    border-top: 1px solid #e89565;
+    border-left: 1px solid #e89565;
+}
+
+#countdown li .seconds {
+    background-color: #df5a49;
+    border-top: 1px solid #e57b6d;
+    border-left: 1px solid #e57b6d;
+}
+
+#countdown li:before {
+    background-color: #FFFFFF;
+    content: "";
+    height: 11px;
+    left: 0;
+    position: absolute;
+    top: 36px;
+    width: 1px;
+}
+
+#countdown li:after {
+    background-color: #FFFFFF;
+    content: "";
+    height: 11px;
+    right: 0;
+    position: absolute;
+    top: 36px;
+    width: 1px;
+}
+
+/*************************
+*******About CSS**********
+**************************/
+
+#about {
+    background-color: #75B46E;
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.guitar2 {
+    top: 0;
+    width: 50%;
+}
+
+.guitar2 img {
+    padding-top: 3%;
+}
+
+.about-content {
+    width: 50%;
+    background-image: url("../images/about-bg.jpg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 70px 110px;
+}
+
+#about h2 {
+    margin-bottom: 23px;
+}
+
+.about-content p {
+    font-size: 17px;
+    /*font-family: 'Dosis',sans-serif;*/
+}
+
+#about .btn-primary {
+    background-color: #137c61;
+    color: #fff;
+    text-transform: capitalize;
+    border: none;
+    margin-top: 28px;
+}
+
+#about .btn-primary:hover {
+    background-color: #126d55
 }
 
 .clock {
@@ -300,7 +460,7 @@ img {
     margin-left: 1rem;
     margin-right: 1rem;
     font-size: 1.1rem;
-    height: 300px;
+    height: 250px;
 }
 
 .one-slide img {
@@ -350,18 +510,134 @@ img {
     }
 }
 
-.map-responsive{
-    overflow:hidden;
+.map-responsive {
+    overflow: hidden;
     padding-top: 10%;
-    padding-bottom:300px;
-    position:relative;
-    height:0;
+    padding-bottom: 300px;
+    position: relative;
+    height: 0;
 }
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/*************************
+******Contact CSS****
+**************************/
+
+.contact-section {
+    background-color: #f7ab24;
+    background-image: url("../images/contact-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/*.ear-piece {*/
+/*position: absolute;*/
+/*left: 0;*/
+/*top: 0;*/
+/*}*/
+
+#contact .container {
+    padding-top: 47px;
+}
+
+#contact h3 {
+    text-transform: inherit;
+    color: #373737;
+}
+
+#contact-section h3 {
+    margin-bottom: 25px
+}
+
+#contact address {
+    font-size: 18px;
+    color: #373737;
+    word-wrap: break-word;
+}
+
+.contact-text {
+    margin-bottom: 35px;
+    display: block;
+}
+
+#contact-section .form-control {
+    border-color: #ae750d;
+    box-shadow: none;
+    outline: 0 none;
+    border-radius: 0;
+    color: #797979;
+    font-size: 18px;
+}
+
+#contact-section .form-control:focus {
+    border-color: #ae750d;
+}
+
+#contact-section input {
+    height: 44px;
+}
+
+#contact-section textarea {
+    height: 90px;
+    resize: none;
+}
+
+#contact-section .btn-primary {
+    background-color: #373737;
+    color: #f7ab24;
+    border: none;
+    font-size: 24px;
+    padding: 6px 42px;
+    margin-bottom: 20px;
+    margin-top: 10px
+}
+
+#contact-section .btn-primary:hover {
+    background-color: #212020;
+    color: #fff
+}
+
+/*************************
+******Footer CSS****
+**************************/
+
+#footer {
+    background-color: #212121;
+    background-image: url("../images/footer-bg.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 35px 0;
+}
+
+#footer a {
+    color: #f7ab24
+}
+
+#footer a:hover {
+    color: #1B7B98
+}
+
+a {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+    outline: none
 }
 
