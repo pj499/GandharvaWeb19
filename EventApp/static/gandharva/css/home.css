@@ -620,15 +620,8 @@ img {
     background-size: cover;
     color: #FFFFFF;
     font-size: 20px;
-    padding: 35px 0;
-}
-
-#footer a {
-    color: #f7ab24
-}
-
-#footer a:hover {
-    color: #1B7B98
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 a {

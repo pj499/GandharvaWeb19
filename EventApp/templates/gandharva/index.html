@@ -3,14 +3,12 @@
 
 {% block title %}Home{% endblock %}
 {% block scripts %}
-    {#    <link href="{% static 'gandharva/css/animate.css' %}" rel="stylesheet">#}
     <link href="{% static 'gandharva/css/responsive.css' %}" rel="stylesheet">
     <link href="{% static 'gandharva/css/home.css' %}" rel="stylesheet">
     <link href="{% static 'gandharva/css/sal.css' %}" rel="stylesheet">
     <script>
         var GandharvaDate = "{{gandharvaDate}}";
     </script>
-
 
     <!--[if lt IE 9]>
 	    <script src="{% static 'gandharva/js/html5shiv.js'%}"></script>
@@ -78,7 +76,6 @@
         </div>
     </section>
 
-
     <section id="explore">
         <div class="container-fluid">
             <div class="row">
@@ -86,8 +83,10 @@
                     <img class="img-fluid" src="{% static 'gandharva/images/watch.png' %}" alt="">
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <h2>our next event in</h2>
-                    <ul id="countdown">
+                    <h2 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="100"
+                        data-sal-duration="800">our next event in</h2>
+                    <ul id="countdown" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="100"
+                        data-sal-duration="800">
                         <li>
                             <span class="days time-font">00</span>
                             <p>days </p>
@@ -108,15 +107,14 @@
                 </div>
             </div>
         </div>
-    </section><!--/#explore-->
-
+    </section>
 
     <section id="eventSection">
         <img class="img-fluid" src="{% static 'gandharva/img/band.png' %}">
         <div class="container-fluid" style="background-color:#33888F">
             <h1 style="text-align: center;padding-top:4vh;color:#fff;" data-sal="slide-up"
                 data-sal-easing="ease-out-bounce"
-                data-sal-delay="300">
+                data-sal-delay="100" data-sal-duration="800">
                 Events</h1>
             <br>
             {% for event in events %}
@@ -124,7 +122,7 @@
                     <div class="row">{% endif %}
             <div class="col-sm-3 eventDiv hvr-bounce-to-top"
                  style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 300px;height: 300px"
-                 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
+                 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800">
                 <h2 class="eventTitle">{{ event.name }}</h2>
                 <p class="eventDescription">
                     {{ event.description }}
@@ -147,8 +145,7 @@
             {% endfor %}
         </div>
         <img class="img-fluid" src="{% static 'gandharva/img/party.png' %}">
-    </section><!--/#event-->
-
+    </section>
 
     <section id="about" style="background-color: #75B46E">
         <div class="container-fluid">
@@ -158,21 +155,26 @@
                          alt="guitar">
                 </div>
                 <div class="col-sm-6">
-                    <h2 style="margin-top: 4vh;text-align: center;">About Gandharva</h2>
-                    <p style="margin-top: 4vh;text-align: center">We have created an extremely positive and relaxed
+                    <h2 style="margin-top: 4vh;text-align: center;" data-sal="slide-up"
+                        data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800">About
+                        Gandharva</h2>
+                    <p style="margin-top: 4vh;text-align: center" data-sal="slide-up"
+                       data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800">We have created
+                        an extremely positive and relaxed
                         environment all geared towards developing your skills
                         whether you are an absolute beginner trying to get off the ground or an accomplished player
                         looking to
                         move to the next level. Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry. Lorem
                         Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                    <a style="margin-bottom: 4vh" href="#" class="btn btn-primary">View Date & Place <i
+                    <a data-sal="slide-up"
+                       data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800"
+                       style="margin-bottom: 4vh" href="#" class="btn btn-primary">View Date & Place <i
                             class="fa fa-angle-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
-
 
     <div id="sponsorSection">
         <section class="orange-fade p-5 margin-top-xl pos-r parallax"
@@ -181,12 +183,12 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <h2 class="text-center font-weight-bold text-white" data-sal="slide-up"
-                            data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">Our
+                            data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800">Our
                             Sponsors</h2>
                         <p></p>
                         <div class="mt-5 pos-r" data-sal="slide-up" data-sal-easing="ease-out-bounce"
-                             data-sal-delay="300"
-                             data-sal-duration="1100">
+                             data-sal-delay="100"
+                             data-sal-duration="800">
                             <div class="carousel-controls testimonial-carousel-controls">
                                 <div class="control prev"><i class="fa fa-chevron-left text-white">&nbsp;</i></div>
                                 <div class="control next"><i class="fa fa-chevron-right text-white">&nbsp;</i></div>
@@ -212,11 +214,10 @@
         </section>
     </div>
 
-
     <section id="contact">
         <div class="map-responsive">
-            <iframe data-sal="slide-left" data-sal-easing="ease-out-bounce" data-sal-delay="300"
-                    data-sal-duration="1100"
+            <iframe data-sal="slide-left" data-sal-easing="ease-out-bounce" data-sal-delay="100"
+                    data-sal-duration="800"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5401738494324!2d73.8832296900385!3d18.45917563402179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaf41ac81e59%3A0xeedc5be537570702!2sVIIT+College+Of+Engineering!5e0!3m2!1sen!2sin!4v1542291058693"
                     frameborder="0" style="border:0;width:100%;height:100%" allowfullscreen></iframe>
         </div>
@@ -226,7 +227,9 @@
                     <div class=" col-md-3 ear-piece">
                         <img class="img-fluid" src="{% static 'gandharva/img/ear-piece.png' %}" alt="">
                     </div>
-                    <div class="col-md-3 col-sm-5">
+                    <div class="col-md-3 col-sm-5" data-sal="slide-left" data-sal-easing="ease-out-bounce"
+                         data-sal-delay="100"
+                         data-sal-duration="800">
                         <div class="contact-text">
                             <h3 style="margin-top:4vh">Contact</h3>
                             <address>
@@ -244,7 +247,9 @@
                         </div>
                     </div>
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-5 col-md-4">
+                    <div class="col-sm-5 col-md-4" data-sal="slide-right" data-sal-easing="ease-out-bounce"
+                         data-sal-delay="100"
+                         data-sal-duration="800">
                         <div id="contact-section">
                             <h3 style="margin-top:4vh">Send a message</h3>
                             <div class="status alert alert-success" style="display: none"></div>
@@ -272,7 +277,6 @@
             </div>
         </div>
     </section>
-    <!--/#contact-->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
