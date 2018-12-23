@@ -36,3 +36,6 @@ def details(request):
         'rules': EventMaster.objects.get(event_name__startswith=event_name).rules.split('. '),
     }
     return render(request, 'events/category1Event1.html', arg)
+
+def contactus(request):
+    return render(request, 'gandharva/contactus.html')
