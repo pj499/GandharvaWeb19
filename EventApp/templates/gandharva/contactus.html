@@ -1,0 +1,79 @@
+{% extends 'gandharva/base.html' %}
+{% load static %}
+{% block title %}Contact Us{% endblock %}
+{% block scripts %}
+    <link href="{% static 'gandharva/css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'gandharva/css/home.css' %}" rel="stylesheet">
+    <link href="{% static 'gandharva/css/sal.css' %}" rel="stylesheet">
+	    <script src="{% static 'gandharva/js/html5shiv.js'%}"></script>
+	    <script src="{% static 'gandharva/js/respond.min.js'%}"></script>
+{% endblock %}
+{% block body %}
+<section id="contact">
+ <div class="contact-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class=" col-md-3 ear-piece">
+                        <img class="img-fluid" src="{% static 'gandharva/img/ear-piece.png' %}" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-5" data-sal="slide-left" data-sal-easing="ease-out-bounce"
+                         data-sal-delay="100"
+                         data-sal-duration="800">
+                        <div class="contact-text">
+                            <h3 style="margin-top:4vh">Contact</h3>
+                            <address>
+                                E-mail: viitgandharva2000@gmail.com<br>
+                                Phone: +1 (123) 456 7890
+                            </address>
+                        </div>
+                        <div class="contact-address">
+                            <address>
+                                Vishwakarma Institute Of Information Technology,<br>
+                                Survey No. 2/3/4,<br>
+                                Kondhawa (Bk),<br>
+                                Pune-48
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-5 col-md-4" data-sal="slide-right" data-sal-easing="ease-out-bounce"
+                         data-sal-delay="100"
+                         data-sal-duration="800">
+                        <div id="contact-section">
+                            <h3 style="margin-top:4vh">Send a message</h3>
+                            <div class="status alert alert-success" style="display: none"></div>
+                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post"
+                                  action="sendemail.php">
+                                <div class="form-group">
+                                    <input type="text" name="name" class="form-control" required="required"
+                                           placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control" required="required"
+                                           placeholder="Email ID">
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" id="message" required="required" class="form-control"
+                                              rows="4" placeholder="Enter your message"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary pull-right">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ {#    <script type="text/javascript" src="{% static 'gandharva/js/jquery.js' %}"></script>#}
+    {#    <script type="text/javascript" src="{% static 'gandharva/js/bootstrap.min.js' %}"></script>#}
+    <script type="text/javascript" src="{% static 'gandharva/js/jquery.parallax.js' %}"></script>
+    <script type="text/javascript" src="{% static 'gandharva/js/jquery.scrollTo.js' %}"></script>
+    <script type="text/javascript" src="{% static 'gandharva/js/jquery.nav.js' %}"></script>
+    <script type="text/javascript" src="{% static 'gandharva/js/smoothscroll.js' %}"></script>
+    <script type="text/javascript" src="{% static 'gandharva/js/main.js' %}"></script>
+    <script type="text/javascript" src="{% static 'gandharva/js/sal.js' %}"></script>
+    <script type="text/javascript" src="{% static 'gandharva/js/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'gandharva/js/home.js' %}"></script>
+{% endblock %}
