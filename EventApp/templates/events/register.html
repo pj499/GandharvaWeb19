@@ -1,0 +1,27 @@
+{% extends 'gandharva/base.html' %}
+
+{% block title %}Register{% endblock %}
+
+
+{% block body %}
+<div>
+    <p>
+    <h1>User Registration</h1>
+    </p>
+
+    <br>
+    {% if registered %}
+        <h1>Thank you for registering!</h1>
+      {% else %}
+        <h1>Register Here</h1>
+        <h3>Just fill out the form.</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+</div>
+{% endif %}
+
+
+{% endblock %}

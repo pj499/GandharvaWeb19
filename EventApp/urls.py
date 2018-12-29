@@ -6,4 +6,11 @@ urlpatterns = [
     url(r'^events/$',views.event, name='events'),
     url(r'^events/details/$', views.details, name='details'),
     url(r'^contactus/$', views.contactus, name='contactus'),
+    url(r'^register/$', views.register, name='register'),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^logout/$', views.logout, name='logout'),
+
 ]
+
+
+

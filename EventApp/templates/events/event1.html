@@ -34,7 +34,7 @@
             <p class="eventDescription">
                 {{ event.objective }}
             </p>
-            <form method="post" action={% url 'details' %}>
+            <form method="post" action="{% url 'details' %}">
                 {% csrf_token %}
                 <input type="hidden" name="event" value={{ event.event_name }} />
                 <button type="submit" class="btn btn-primary eventButtons">Learn

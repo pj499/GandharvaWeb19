@@ -46,7 +46,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     {% for event in events %}
-                        <form method="post" action={% url 'events' %}>
+                        <form method="post" action="{% url 'events' %}">
                             {% csrf_token %}
                             <input type="hidden" name="dept" value={{ event.name }}>
                             <button type="submit" class="dropdown-item">{{ event.name }}</button>
@@ -63,12 +63,21 @@
                 <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-            </li>
+                <a class="nav-link" href="{% url 'register' %}">Register</a>
+            </li class="nav-item">
+            {% if user.is_authenticated %}
+             <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li class="nav-item">
+          {% else %}
+             <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            </li class="nav-item">
+          {% endif %}
         </ul>
     </div>
 </nav>
-
+<br>
 {% block body %}
 {% endblock %}
 <footer id="footer">
