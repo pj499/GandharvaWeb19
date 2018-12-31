@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login , logout
 from django.urls import reverse
 from EventApp.models import Department, EventMaster, Carousel, SponsorMaster
-from .forms import UserRegistration
+from .forms import UserRegistration , ContactUsForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -42,7 +43,17 @@ def details(request):
     return render(request, 'events/category1Event1.html', arg)
 
 def contactus(request):
-    return render(request, 'gandharva/contactus.html')
+    if request.method == 'POST':
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('contactus')
+        else:
+            print(form.errors)
+    else:
+        form = ContactUsForm()
+
+    return render(request, 'gandharva/contactus.html',{'form':form})
 
 def register(request):
     registered = False
@@ -60,14 +71,15 @@ def register(request):
 
     else:
         form = UserRegistration()
+
     return render(request, 'events/register.html', {'form': form, 'registered': registered})
 
-    @login_required
-    def user_logout(request):
-        logout(request)
-        return reverse('home')
 
-    def login(request):
+def user_logout(request):
+        logout(request)
+        return redirect('home')
+
+def user_login(request):
 
         if request.method == 'POST':
             username = request.POST.get('username')
@@ -76,13 +88,12 @@ def register(request):
             if user is not None:
                     if user.is_active:
                         login(request, user)
-                        return reverse('home')
+                        return redirect('home')
                     else:
                         print("Your account was inactive.")
             else:
-                    print("Someone tried to login and failed.")
-                    print("They used username: {} and password: {}".format(username, password))
-                    return render(request, 'events/login.html', {})
+                messages.error(request, 'Error wrong username/password')
+                return render(request, 'events/login.html', {})
 
         else:
             return render(request, 'events/login.html', {})

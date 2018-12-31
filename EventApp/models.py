@@ -48,3 +48,10 @@ class SponsorMaster(models.Model):
 class Carousel(models.Model):
     src = models.CharField(max_length=200)
 
+class ContactUs(models.Model):
+    user_name = models.CharField(max_length=30)
+    user_id = models.EmailField()
+    user_message = models.CharField(max_length=300)
+
+    def __str__(self):
+        return self.user_name

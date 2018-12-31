@@ -8,7 +8,14 @@
 
     <h1>User Login</h1>
     <br>
-<form method="post" action="{% url 'login' %}">
+    {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+<form method="post" action="{% url 'user_login' %}">
           {% csrf_token %}
           <label for="username">Username:</label>
           <input type="text" name="username" placeholder="Username">
