@@ -10,9 +10,9 @@ class UserRegistration(forms.ModelForm):
 
 
 class ContactUsForm(forms.ModelForm):
-    contact_name = forms.CharField(required=True)
-    contact_email = forms.EmailField(required=True)
-    content = forms.CharField(required=True,widget=forms.Textarea)
+    user_name = forms.CharField(required=True)
+    user_id = forms.EmailField(required=True)
+    user_message = forms.CharField(required=True,widget=forms.Textarea)
 
     class Meta:
         model = ContactUs

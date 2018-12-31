@@ -43,18 +43,35 @@
                             <h3 style="margin-top:4vh">Send a message</h3>
                             <div class="status alert alert-success" style="display: none"></div>
                             <form id="main-contact-form" class="contact-form" name="contact-form" method="post"
-                                  action="sendemail.php">
+                                  action="">
+                                {% csrf_token %}
+                                {% if form.non_field_errors %}
+                                    <ul>
+                                        {% for error in form.non_field_errors %}
+                                            <li>{{ error }}</li>
+                                         {% endfor %}
+                                    </ul>
+                                {% endif %}
+                                {% if form.name.errors %}
+                                    <ul>
+                                        {% for error in form.name.errors %}
+                                            <li>{{ error }}</li>
+                                        {% endfor %}
+                                {% endif %}
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" required="required"
-                                           placeholder="Name">
+                                    {{form.user_name.errors}}
+                                    <label for="{{ form.user_name.id_for_label }}">Name :</label>
+                                    {{form.user_name}}
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control" required="required"
-                                           placeholder="Email ID">
+                                    {{form.user_id.errors}}
+                                    <label for="{{ form.user_id.id_for_label }}">Email Id :</label>
+                                    {{form.user_id}}
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="message" id="message" required="required" class="form-control"
-                                              rows="4" placeholder="Enter your message"></textarea>
+                                   {{form.user_message.errors}}
+                                    <label for="{{ form.user_message.id_for_label }}">Message :</label>
+                                    {{form.user_message}}
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary pull-right">Send</button>
