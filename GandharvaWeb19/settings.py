@@ -121,3 +121,7 @@ STATIC_URL = '/static/'
 # ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+# Redirect http requests to https
+
+SECURE_SSL_REDIRECT = True
