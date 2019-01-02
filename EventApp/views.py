@@ -56,7 +56,6 @@ def contactus(request):
     return render(request, 'gandharva/contactus.html',{'form':form})
 
 def register(request):
-    registered = False
     if request.method == 'POST':
         form = UserRegistration(request.POST)
         if form.is_valid():
@@ -65,14 +64,15 @@ def register(request):
             password = form.cleaned_data.get('password')
             user.set_password(password)
             user.save()
-            registered = True
+            login(request,user)
+            return redirect('home')
         else:
             print (form.errors)
 
     else:
         form = UserRegistration()
 
-    return render(request, 'events/register.html', {'form': form, 'registered': registered})
+    return render(request, 'events/register.html', {'form': form})
 
 
 def user_logout(request):
