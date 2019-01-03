@@ -50,24 +50,10 @@ class Carousel(models.Model):
     src = models.CharField(max_length=200)
 
 class ContactUs(models.Model):
-    COMPUTER = 'COMPUTER'
-    IT = 'IT'
-    ENTC = 'ENTC'
-    MECHANICAL = 'MECHANICAL'
-    CIVIL = 'CIVIL'
-    OTHER = 'OTHER'
-    CATEGORY_CHOICES = (
-        (COMPUTER, 'computer'),
-        (IT, 'it'),
-        (ENTC, 'entc'),
-        (MECHANICAL, 'mechanical'),
-        (CIVIL, 'civil'),
-        (OTHER, 'other')
-    )
     user_name = models.CharField(max_length=30)
     user_id = models.EmailField()
+    category = models.CharField(max_length = 100)
     user_message = models.CharField(max_length=300)
-    category = models.CharField(max_length = 100, choices = CATEGORY_CHOICES, default = COMPUTER)
 
     def __str__(self):
         return self.user_name

@@ -69,6 +69,22 @@
                                     {{form.user_id}}
                                 </div>
                                 <div class="form-group">
+                                    {{form.category.errors}}
+                                     <label for="Category">Category :</label>
+                                    <input id="computer" type="radio" name="category" value="COMPUTER" checked>
+                                    <label for="computer">COMPUTER</label>
+                                    <input id="it" type="radio" name="category" value="IT">
+                                    <label for="it">IT</label>
+                                    <input id="entc" type="radio" name="category" value="ENTC">
+                                    <label for="entc">ENTC</label>
+                                    <input id="mechanical" type="radio" name="category" value="MECHANICAL">
+                                    <label for="mechanical">MECHANICAL</label>
+                                    <input id="civil" type="radio" name="category" value="CIVIL">
+                                    <label for="civil">CIVIL</label>
+                                    <input id="other" type="radio" name="category" value="OTHER">
+                                    <label for="other">OTHER</label>
+                                </div>
+                                <div class="form-group">
                                    {{form.user_message.errors}}
                                     <label for="{{ form.user_message.id_for_label }}">Message :</label>
                                     {{form.user_message}}
