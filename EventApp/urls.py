@@ -1,6 +1,7 @@
 from django.conf.urls import url, include
 from . import views
 
+
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^events/$',views.event, name='events'),
@@ -9,6 +10,7 @@ urlpatterns = [
     url(r'^login/register/$', views.register, name='register'),
     url(r'^login/$', views.user_login, name='user_login'),
     url(r'^logout/$', views.user_logout, name='user_logout'),
+    url(r'^auth/', include('social_django.urls', namespace='social')),
 
 ]
 
