@@ -64,7 +64,7 @@ def register(request):
             password = form.cleaned_data.get('password')
             user.set_password(password)
             user.save()
-            login(request,user)
+            login(request, user, backend='social_core.backends.google.GoogleOAuth2')
             return redirect('home')
         else:
             print (form.errors)

@@ -63,9 +63,24 @@
                 <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
             </li>
             {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    {{user.username}}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <form method="post" action="{% url 'events' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="dept" value= >
+                            <button type="submit" class="dropdown-item">Register Heads</button>
+                        </form>
+                </div>
+            {% else %}
             <li class="nav-item">
                 <a class="nav-link" >{{user.username}}</a>
             </li>
+            {% endif %}
              <li class="nav-item">
                 <a class="nav-link" href="{% url 'user_logout' %}">Logout</a>
             </li>
