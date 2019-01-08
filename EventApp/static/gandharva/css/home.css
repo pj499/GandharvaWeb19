@@ -12,7 +12,7 @@ html, body {
 
 .navbar {
     background-color: #1B7B98 !important;
-    opacity: 0.86;
+    opacity: 1;
 }
 
 nav .navbar-nav li a {
@@ -33,15 +33,21 @@ nav .navbar-nav li a {
     opacity: 1;
 }
 
- .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-     background-color: #fff;
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    background-color: #fff;
     color: #16728f !important;
 }
 
-
-nav li .active a{
-   background-color: #fff;
+nav li .active a {
+    background-color: #fff;
     color: #16728f !important;
+}
+
+.nav.navbar-nav li a {
+    color: white !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 4px;
 }
 
 /*************************

@@ -5,12 +5,13 @@
     <link href="{% static 'gandharva/css/responsive.css' %}" rel="stylesheet">
     <link href="{% static 'gandharva/css/home.css' %}" rel="stylesheet">
     <link href="{% static 'gandharva/css/sal.css' %}" rel="stylesheet">
-	    <script src="{% static 'gandharva/js/html5shiv.js'%}"></script>
-	    <script src="{% static 'gandharva/js/respond.min.js'%}"></script>
+    <script src="{% static 'gandharva/js/html5shiv.js' %}"></script>
+    <script src="{% static 'gandharva/js/respond.min.js' %}"></script>
 {% endblock %}
 {% block body %}
-<section id="contact">
- <div class="contact-section">
+    <div class="col-sm-12" style="height: 76px; background-color:#f9ab00"></div>
+    <section id="contact">
+        <div class="contact-section">
             <div class="container-fluid">
                 <div class="row">
                     <div class=" col-md-3 ear-piece">
@@ -49,28 +50,28 @@
                                     <ul>
                                         {% for error in form.non_field_errors %}
                                             <li>{{ error }}</li>
-                                         {% endfor %}
+                                        {% endfor %}
                                     </ul>
                                 {% endif %}
                                 {% if form.name.errors %}
                                     <ul>
-                                        {% for error in form.name.errors %}
-                                            <li>{{ error }}</li>
-                                        {% endfor %}
+                                    {% for error in form.name.errors %}
+                                        <li>{{ error }}</li>
+                                    {% endfor %}
                                 {% endif %}
                                 <div class="form-group">
-                                    {{form.user_name.errors}}
+                                    {{ form.user_name.errors }}
                                     <label for="{{ form.user_name.id_for_label }}">Name :</label>
-                                    {{form.user_name}}
+                                    {{ form.user_name }}
                                 </div>
                                 <div class="form-group">
-                                    {{form.user_id.errors}}
+                                    {{ form.user_id.errors }}
                                     <label for="{{ form.user_id.id_for_label }}">Email Id :</label>
-                                    {{form.user_id}}
+                                    {{ form.user_id }}
                                 </div>
                                 <div class="form-group">
-                                    {{form.category.errors}}
-                                     <label for="Category">Category :</label>
+                                    {{ form.category.errors }}
+                                    <label for="Category">Category :</label>
                                     <input id="computer" type="radio" name="category" value="COMPUTER" checked>
                                     <label for="computer">COMPUTER</label>
                                     <input id="it" type="radio" name="category" value="IT">
@@ -85,9 +86,9 @@
                                     <label for="other">OTHER</label>
                                 </div>
                                 <div class="form-group">
-                                   {{form.user_message.errors}}
+                                    {{ form.user_message.errors }}
                                     <label for="{{ form.user_message.id_for_label }}">Message :</label>
-                                    {{form.user_message}}
+                                    {{ form.user_message }}
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary pull-right">Send</button>
@@ -99,7 +100,7 @@
             </div>
         </div>
     </section>
- {#    <script type="text/javascript" src="{% static 'gandharva/js/jquery.js' %}"></script>#}
+    {#    <script type="text/javascript" src="{% static 'gandharva/js/jquery.js' %}"></script>#}
     {#    <script type="text/javascript" src="{% static 'gandharva/js/bootstrap.min.js' %}"></script>#}
     <script type="text/javascript" src="{% static 'gandharva/js/jquery.parallax.js' %}"></script>
     <script type="text/javascript" src="{% static 'gandharva/js/jquery.scrollTo.js' %}"></script>
