@@ -3,31 +3,30 @@
 
 {% block title %}{{ pageTitle }}{% endblock %}
 
-{% block btstrap %}
-<link rel="stylesheet" type="text/css" href="{% static 'events/css/events.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'events/css/slick.min.css' %}">
-<link rel="stylesheet" type="text/css" href="{% static 'events/css/sal.css' %}">
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/events.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'events/css/sal.css' %}">
 {% endblock %}
 
 {% block dropdown %}
-{% for event in events %}
-<form method="post" action={% url 'details' %} >
-{% csrf_token %}
-<input type="hidden" name="event" value={{ event.event_name }}/>
-<button type="submit" class="dropdown-item">{{ event.event_name }}</button>
-</form>
-{% endfor %}
+    {% for event in events %}
+        <form method="post" action={% url 'details' %}>
+            {% csrf_token %}
+            <input type="hidden" name="event" value={{ event.event_name }}/>
+            <button type="submit" class="dropdown-item">{{ event.event_name }}</button>
+        </form>
+    {% endfor %}
 {% endblock %}
 
 {% block body %}
-<br><br>
+    <br><br>
     <h1 class="title" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300">{{ pageTitle }}</h1>
     <br><br>
     <div class="container-fluid">
         {% for event in events %}
             {% if forloop.first %}
                 <div class="row">{% endif %}
-        <div class="col-sm-3  eventDiv hvr-bounce-to-top"
+        <div class="col-sm-3 eventDiv hvr-bounce-to-top"
              style="background-image:url({% static event.img %}); background-repeat: no-repeat; background-size: cover; width: 100%;height: auto"
              data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300" data-sal-duration="1100">
             <h1 class="eventTitle">{{ event.event_name }}</h1>
@@ -36,10 +35,10 @@
             </p>
             <form method="post" action="{% url 'details' %}">
                 {% csrf_token %}
-                <input type="hidden" name="event" value={{ event.event_name }} />
+                <input type="hidden" name="event" value={{ event.event_name }}/>
                 <button type="submit" class="btn btn-primary eventButtons">Learn
-                More
-            </button>
+                    More
+                </button>
             </form>
 
         </div>
@@ -52,44 +51,16 @@
         {% endfor %}
     </div>
     <br><br><br>
-
-<footer class="page-footer font-small"
-        style=" text-align: center; color:#fff;background-color:#222222; padding-top:2vh">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" style="font-size: 22px">
-                <div class="mb-0 flex-center" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="300"
-                     data-sal-duration="1100">
-                    <a class="fb-ic" href="https://www.facebook.com/viitgandharva/" target="_blank">
-                        <i class="fab fa-facebook-f white-text  fa-2x" style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
-                    </a>
-                    <a class="tw-ic" href="https://mobile.twitter.com/gandharva_18" target="_blank">
-                        <i class="fab fa-twitter fa-lg white-text fa-2x" style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
-                    </a>
-                    <a class="ins-ic" href="https://www.instagram.com/viitgandharva/" target="_blank">
-                        <i class="fab fa-instagram fa-lg white-text fa-2x" style="color:#fff;font-size: 26px;margin-right:2vw"> </i>
-                    </a>
-                    <a class="pin-ic" href="https://www.youtube.com/channel/UCdtq-lCC25RpJIjSPCIR9Nw/featured" target="_blank">
-                        <i class="fab fa-youtube fa-lg white-text fa-2x" style="color: #fff;font-size: 26px;margin-right:2vw"> </i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright text-center" style="font-size:16px;padding-bottom: 2vh">© 2019 Copyright:
-        <a href="{% url 'home' %}"> gandharva2019.com</a>
-    </div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
-        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
-<script src="{% static 'events/js/sal.js' %}"></script>
-<script src="{% static 'events/js/slick.min.js' %}"></script>
-<script src="{% static 'events/js/events.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+            integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+            crossorigin="anonymous"></script>
+    <script src="{% static 'events/js/sal.js' %}"></script>
+    <script src="{% static 'events/js/slick.min.js' %}"></script>
+    <script src="{% static 'events/js/events.js' %}"></script>
 {% endblock %}
