@@ -9,7 +9,7 @@ html, body {
     font-family: 'Lato', sans-serif;
     background-color: #f2f2f2;
 }
-
+/*
 .navbar {
     background-color: #1B7B98 !important;
     opacity: 1;
@@ -49,7 +49,7 @@ nav li .active a {
     text-transform: uppercase;
     margin: 4px;
 }
-
+*/
 /*************************
 *******Explore CSS******
 **************************/
@@ -617,7 +617,7 @@ img {
 /*************************
 ******Footer CSS****
 **************************/
-
+/*
 #footer {
     background-color: #212121;
     background-image: url("../images/footer-bg.jpg");
@@ -642,3 +642,4 @@ a:hover {
     text-decoration: none;
     outline: none
 }
+*/
