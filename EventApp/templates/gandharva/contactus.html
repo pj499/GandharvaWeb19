@@ -61,13 +61,11 @@
                                 {% endif %}
                                 <div class="form-group">
                                     {{ form.user_name.errors }}
-                                    <label for="{{ form.user_name.id_for_label }}">Name :</label>
-                                    {{ form.user_name }}
+                                       Name : <input id="name" type="text" name="user_name">
                                 </div>
                                 <div class="form-group">
                                     {{ form.user_id.errors }}
-                                    <label for="{{ form.user_id.id_for_label }}">Email Id :</label>
-                                    {{ form.user_id }}
+                                    Email Id: <input id="email" type="email" name="user_id">
                                 </div>
                                 <div class="form-group">
                                     {{ form.category.errors }}
@@ -87,8 +85,7 @@
                                 </div>
                                 <div class="form-group">
                                     {{ form.user_message.errors }}
-                                    <label for="{{ form.user_message.id_for_label }}">Message :</label>
-                                    {{ form.user_message }}
+                                    Message: <input id="message" type="text" name="user_message">
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary pull-right">Send</button>
