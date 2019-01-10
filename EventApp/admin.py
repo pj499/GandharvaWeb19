@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import EventMaster,EventDepartment,Department,SponsorMaster,Carousel,ContactUs
+from .models import EventMaster,EventDepartment,Department,SponsorMaster,Carousel,ContactUs,MyUser
 
+
+admin.site.register(MyUser)
 admin.site.register(EventMaster)
 admin.site.register(EventDepartment)
 admin.site.register(Department)

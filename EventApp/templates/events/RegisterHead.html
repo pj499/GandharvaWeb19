@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Register Head{% endblock %}
+
+
+{% block body %}
+<div>
+    <p>
+    <h1>Head Registration</h1>
+    </p>
+
+    <br>
+        <h1>Register Here</h1>
+        <h3>Just fill out the form.</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+     <br>
+  <p><strong>-- OR --</strong></p>
+  <a href="{% url 'social:begin' 'google-oauth2' %}">SignUp with Google</a><br>
+</div>
+
+
+
+{% endblock %}

@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login , logout
 from django.urls import reverse
 from EventApp.models import Department, EventMaster, Carousel, SponsorMaster
-from .forms import UserRegistration , ContactUsForm
+from .forms import UserRegistration , ContactUsForm , HeadRegistration
 from django.contrib import messages
-
+from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth.models import Group , User
 
 # Create your views here.
 
@@ -98,8 +99,27 @@ def user_login(request):
         else:
             return render(request, 'events/login.html', {})
 
+@user_passes_test(lambda u: u.is_superuser)
+def RegisterHead(request):
+    if request.method == 'POST':
+        form = HeadRegistration(request.POST)
+        if form.is_valid():
+            user=form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user.set_password(password)
+            user.save()
+      #       group = Group.objects.get(name='groupname')
+      #      user.groups.add(group)
+      #login(request, user, backend='social_core.backends.google.GoogleOAuth2')
+            return redirect('home')
+        else:
+            print (form.errors)
 
+    else:
+        form = HeadRegistration()
 
+    return render(request, 'events/RegisterHead.html', {'form': form})
 
 
 

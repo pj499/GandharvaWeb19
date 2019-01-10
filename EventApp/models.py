@@ -1,8 +1,22 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 
 # Create your models here.
 
+class MyUser(AbstractUser):
+  USER_TYPE_CHOICES = (
+      (1, 'Participant'),
+      (2, 'Event Head'),
+      (3, 'Department Head'),
+      (4, 'Joint Head'),
+      (5, 'Gandharva Incharge'),
+      (6, 'admin')
+  )
 
+  user_type = models.PositiveSmallIntegerField(choices=USER_TYPE_CHOICES, default = 1)
+
+  def __str__(self):
+     return self.username
 
 class EventMaster(models.Model):
     event_id = models.IntegerField(primary_key=True)

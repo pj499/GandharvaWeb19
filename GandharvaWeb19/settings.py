@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social_django'
+    'social_django',
 ]
+AUTH_USER_MODEL = 'EventApp.MyUser'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -132,8 +134,9 @@ STATIC_URL = '/static/'
 #     os.path.join(BASE_DIR, "EventApp/static")
 # ]
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY =''  #Paste CLient Key
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '' #Paste Secret Key
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='519854616069-hj7chgsltbjad2p5mcvv8241ruob2e5m.apps.googleusercontent.com'  #Paste CLient Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'x77Vt0Zv3fTqjpCLN-Ec4Irg' #Paste Secret Key
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")

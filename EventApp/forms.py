@@ -1,11 +1,11 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import ContactUs
+from .models import ContactUs, MyUser
 
 class UserRegistration(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
     class Meta:
-        model = User
+        model = MyUser
         fields = ['username','email','password']
 
 
@@ -20,5 +20,11 @@ class ContactUsForm(forms.ModelForm):
 
 
 
+class HeadRegistration(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput())
+    user_type= forms.IntegerField()
+    class Meta:
+        model = MyUser
+        fields = ['username','email','password','user_type']
 
 
