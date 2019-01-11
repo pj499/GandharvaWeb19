@@ -61,31 +61,28 @@
                                 {% endif %}
                                 <div class="form-group">
                                     {{ form.user_name.errors }}
-                                       Name : <input id="name" type="text" name="user_name">
+                                       Name  : <input id="name" type="text" name="user_name">
                                 </div>
                                 <div class="form-group">
                                     {{ form.user_id.errors }}
-                                    Email Id: <input id="email" type="email" name="user_id">
+                                    Email Id  : <input id="email" type="email" name="user_id">
                                 </div>
                                 <div class="form-group">
                                     {{ form.category.errors }}
-                                    <label for="Category">Category :</label>
-                                    <input id="computer" type="radio" name="category" value="COMPUTER" checked>
-                                    <label for="computer">COMPUTER</label>
-                                    <input id="it" type="radio" name="category" value="IT">
-                                    <label for="it">IT</label>
-                                    <input id="entc" type="radio" name="category" value="ENTC">
-                                    <label for="entc">ENTC</label>
-                                    <input id="mechanical" type="radio" name="category" value="MECHANICAL">
-                                    <label for="mechanical">MECHANICAL</label>
-                                    <input id="civil" type="radio" name="category" value="CIVIL">
-                                    <label for="civil">CIVIL</label>
-                                    <input id="other" type="radio" name="category" value="OTHER">
-                                    <label for="other">OTHER</label>
+                                    CATEGORY :
+                                    <select name="category"  >
+                                        <option value="COMPUTER">COMPUTER</option>
+                                        <option value="IT">IT</option>
+                                        <option value="ENTC">ENTC</option>
+                                        <option value="MECHANICAL">MECHANICAL</option>
+                                        <option value="CIVIL">CIVIL</option>
+                                        <option value="OTHER">OTHER</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     {{ form.user_message.errors }}
-                                    Message: <input id="message" type="text" name="user_message">
+                                    Message:
+                                    <textarea name="user_message" rows="10" cols="30" placeholder="Message"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary pull-right">Send</button>
