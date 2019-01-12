@@ -12,7 +12,31 @@
             <h1>User Registration</h1>
             <form method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
+                 {% if form.non_field_errors %}
+                    <ul>
+                        {% for error in form.non_field_errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                     </ul>
+                 {% endif %}
+                {% if form.name.errors %}
+                        <ul>
+                            {% for error in form.name.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                {% endif %}
+                <div class="form-group">
+                    <input class="form-control" type="text" name="username" placeholder="Username">
+                    {{ form.username.errors }}
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="email" name="email" placeholder="E-mail Id">
+                    {{ form.email.errors }}
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                    {{ form.password.errors }}
+                </div>
                 <button type="submit" class="btn btn-primary pull-right">Submit</button>
             </form>
             <hr>
