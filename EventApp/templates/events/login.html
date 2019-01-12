@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %}Log In{% endblock %}
 {% block css %}
-    <link href="{% static 'events/css/login.css' %}" rel="stylesheet">
+    <link href="{% static 'events/css/login_signup.css' %}" rel="stylesheet">
     <link href="{% static 'gandharva/css/sal.css' %}" rel="stylesheet">
 {% endblock %}
 
@@ -42,9 +42,7 @@
                  </span>
                 </div>
             </div>
-        </div>
-        <br>
-        <div class="col-sm-5 container-center">
+             <br>
             <form method="post" action="{% url 'register' %}">
                 {% csrf_token %}
                 <h5>Not Signed Up? Register Now</h5>

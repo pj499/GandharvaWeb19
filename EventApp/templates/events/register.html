@@ -1,27 +1,32 @@
-{% extends 'gandharva/../base/base.html' %}
-
+{% extends 'base/base.html' %}
+{% load static %}
 {% block title %}Register{% endblock %}
-
-
+{% block css %}
+    <link href="{% static 'events/css/login_signup.css' %}" rel="stylesheet">
+    <link href="{% static 'gandharva/css/sal.css' %}" rel="stylesheet">
+{% endblock %}
 {% block body %}
-<div>
-    <p>
-    <h1>User Registration</h1>
-    </p>
-
-    <br>
-        <h1>Register Here</h1>
-        <h3>Just fill out the form.</h3>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-</form>
-     <br>
-  <p><strong>-- OR --</strong></p>
-  <a href="{% url 'social:begin' 'google-oauth2' %}">SignUp with Google</a><br>
-</div>
-
-
-
+    <div class="col-sm-12" style="height:64px; background-color:#f9ab00"></div>
+    <div class="container">
+        <div class="col-sm-5 container-center">
+            <h1>User Registration</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary pull-right">Submit</button>
+            </form>
+            <hr>
+            <div class='g-sign-in-button'>
+                <div class=content-wrapper>
+                    <div class='logo-wrapper'>
+                        <img src='https://developers.google.com/identity/images/g-logo.png'>
+                    </div>
+                    <span class='text-container'>
+                    <a style="color: #fff" href="{% url 'social:begin' 'google-oauth2' %}">Sign Up with Google</a>
+                 </span>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
 {% endblock %}
