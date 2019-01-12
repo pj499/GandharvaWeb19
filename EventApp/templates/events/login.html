@@ -9,13 +9,6 @@
 {% block body %}
     <div class="col-sm-12" style="height:64px; background-color:#f9ab00"></div>
     <div class="container">
-        {% if messages %}
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
         <div class="col-sm-5 container-center">
             <h1>User Login</h1>
             <br>
@@ -27,6 +20,13 @@
                 <div class="form-group">
                     <input class="form-control" type="password" name="password" placeholder="Password">
                 </div>
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary pull-right" value="Login">
                 </div>
@@ -42,7 +42,7 @@
                  </span>
                 </div>
             </div>
-             <br>
+            <br>
             <form method="post" action="{% url 'register' %}">
                 {% csrf_token %}
                 <h5>Not Signed Up? Register Now</h5>
