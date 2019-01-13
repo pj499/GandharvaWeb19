@@ -44,7 +44,7 @@
                 </div>
             </div>
             <br>
-            <form method="post" action="{% url 'register' %}">
+            <form method="get" action="{% url 'register' %}">
                 {% csrf_token %}
                 <h5>Not Signed Up?
                     Register Now</h5>
