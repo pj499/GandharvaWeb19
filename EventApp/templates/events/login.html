@@ -7,10 +7,10 @@
 {% endblock %}
 
 {% block body %}
-    <div class="col-sm-12" style="height:64px; background-color:#f9ab00"></div>
+    <br><br><br>
     <div class="container">
         <div class="col-sm-5 container-center" data-sal="slide-up"
-                data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800">
+             data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800">
             <h1>User Login</h1>
             <br>
             <form method="post" action="{% url 'user_login' %}">
@@ -39,7 +39,7 @@
                         <img src='https://developers.google.com/identity/images/g-logo.png'>
                     </div>
                     <span class='text-container'>
-                    <a style="color: #fff" href="{% url 'social:begin' 'google-oauth2' %}">Sign in with Google</a>
+                    <a style="color: #fff" href="{% url 'social:begin' 'google-oauth2' %}">Sign in using Google</a>
                  </span>
                 </div>
             </div>
@@ -52,6 +52,7 @@
                 </button>
             </form>
         </div>
+        <br>
     </div>
     {% block scripts %}
         <script type="text/javascript"> sal();</script>
