@@ -9,11 +9,6 @@
     <script>
         var GandharvaDate = "{{gandharvaDate}}";
     </script>
-
-    <!--[if lt IE 9]>
-	    <script src="{% static 'gandharva/js/html5shiv.js'%}"></script>
-	    <script src="{% static 'gandharva/js/respond.min.js'%}"></script>
-    <![endif]-->
 {% endblock %}
 
 {% block body %}
@@ -21,6 +16,7 @@
         <div class="container-fluid" style="background-color: rgba(0,0,0,0.8); padding:0;height: auto;width: 100%">
             <div class="row">
                 <div class="col-12">
+
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"
                          data-interval="3000" style="width: 100%;">
                         <div class="carousel-inner">
@@ -39,38 +35,10 @@
                             {% endfor %}
                         </div>
                     </div>
-                    {#            <div class="clock">#}
-                    {#                <div id="particle">#}
-                    {#                    <div id="particles-js"></div>#}
-                    {#                </div>#}
-                    {#                <h1>Gandharva 2019</h1>#}
-                    {#                <div class="row cd100" style="margin:6vw;" id="countdowntimer">#}
-                    {#                    <div class="col">#}
-                    {#                        <div style="margin:1vw;">#}
-                    {#                            <h2 id="day" class="l2-txt1 p-b-9 days" style="font-weight: bold;padding:2vw;"></h2>#}
-                    {#                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Days</h2>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {#                    <div class="col">#}
-                    {#                        <div style="margin: 1vw;">#}
-                    {#                            <h2 id="hour" class="l2-txt1 p-b-9 hours" style="font-weight: bold;padding:2vw" ;></h2>#}
-                    {#                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px;">Hrs</h2>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {#                    <div class="col">#}
-                    {#                        <div style="margin: 1vw;">#}
-                    {#                            <h2 id="min" class="l2-txt1 p-b-9 minutes" style="font-weight: bold;padding:2vw"></h2>#}
-                    {#                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Min</h2>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {#                    <div class="col">#}
-                    {#                        <div style="margin: 1vw;">#}
-                    {#                            <h2 id="sec" class="l2-txt1 p-b-9 seconds" style="font-weight: bold;padding:2vw"></h2>#}
-                    {#                            <h2 class="s2-txt4" style="padding:1vw;font-weight: bold;font-size: 26px">Sec</h2>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {#                </div>#}
-                    {#            </div>#}
+                </div>
+                <div id="particle">
+                    <div id="particles-js"></div>
+                    <h1>Gandharva</h1>
                 </div>
             </div>
         </div>
@@ -83,25 +51,25 @@
                     <img class="img-fluid" src="{% static 'gandharva/images/watch.png' %}" alt="">
                 </div>
                 <div class="col-sm-12 col-md-6">
-                    <h2 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="100"
-                        data-sal-duration="800">our next event in</h2>
+                    <h1 data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="100"
+                        data-sal-duration="800">Our next event in</h1>
                     <ul id="countdown" data-sal="slide-up" data-sal-easing="ease-out-bounce" data-sal-delay="100"
                         data-sal-duration="800">
                         <li>
                             <span class="days time-font">00</span>
-                            <p>days </p>
+                            <p>Days </p>
                         </li>
                         <li>
                             <span class="hours time-font">00</span>
-                            <p class="">hours </p>
+                            <p class="">Hours </p>
                         </li>
                         <li>
                             <span class="minutes time-font">00</span>
-                            <p class="">minutes</p>
+                            <p class="">Minutes</p>
                         </li>
                         <li>
                             <span class="seconds time-font">00</span>
-                            <p class="">seconds</p>
+                            <p class="">Seconds</p>
                         </li>
                     </ul>
                 </div>
@@ -112,7 +80,7 @@
     <section id="eventSection">
         <img class="img-fluid" src="{% static 'gandharva/img/band.png' %}">
         <div class="container-fluid" style="background-color:#33888F">
-            <h1 style="text-align: center;padding-top:4vh;color:#fff;" data-sal="slide-up"
+            <h1 style="text-align: center;padding-top:4vh;color:#fff;font-weight: bold" data-sal="slide-up"
                 data-sal-easing="ease-out-bounce"
                 data-sal-delay="100" data-sal-duration="800">
                 Events</h1>
@@ -155,7 +123,7 @@
                          alt="guitar">
                 </div>
                 <div class="col-sm-6">
-                    <h2 style="margin-top: 4vh;text-align: center;" data-sal="slide-up"
+                    <h2 style="margin-top: 4vh;text-align: center;font-weight: bold" data-sal="slide-up"
                         data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800">About
                         Gandharva</h2>
                     <p style="margin-top: 4vh;text-align: center" data-sal="slide-up"
@@ -167,11 +135,13 @@
                         move to the next level. Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry. Lorem
                         Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                    <a data-sal="slide-up"
-                       data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800"
-                       style="margin-bottom: 4vh;margin-left: 18vw" href="#" class="btn btn-primary">View Date & Place
-                        <i
-                                class="fa fa-angle-right"></i></a>
+
+                    <div style="display: flex;align-items: center;justify-content: center; margin-bottom:22px">
+                        <button data-sal="slide-up"
+                                data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800"
+                                class="btn btn-primary">View Date & Place
+                            <i class="fa fa-angle-right"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -231,6 +201,7 @@
         <script type="text/javascript" src="{% static 'gandharva/js/smoothscroll.js' %}"></script>
         <script type="text/javascript" src="{% static 'gandharva/js/main.js' %}"></script>
         <script type="text/javascript" src="{% static 'gandharva/js/slick.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'gandharva/js/particles.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'gandharva/js/home.js' %}"></script>
     {% endblock %}
 {% endblock %}
