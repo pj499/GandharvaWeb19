@@ -66,7 +66,7 @@ class Carousel(models.Model):
 class ContactUs(models.Model):
     user_name = models.CharField(max_length=30)
     user_id = models.EmailField()
-    category = models.CharField(max_length = 100)
+    category = models.CharField(max_length = 100, blank=True, null = True)
     user_message = models.CharField(max_length=300)
 
     def __str__(self):

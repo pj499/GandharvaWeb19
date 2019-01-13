@@ -1,5 +1,4 @@
 from django import forms
-from django.contrib.auth.models import User
 from .models import ContactUs, MyUser
 
 class UserRegistration(forms.ModelForm):
@@ -13,7 +12,7 @@ class UserRegistration(forms.ModelForm):
 class ContactUsForm(forms.ModelForm):
     user_name = forms.CharField(required=True)
     user_id = forms.EmailField(required=True)
-    category = forms.CharField(required=True)
+    category = forms.CharField(required=False)
     user_message = forms.CharField(required=True,widget=forms.Textarea)
     class Meta:
         model = ContactUs
