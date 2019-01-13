@@ -3,13 +3,14 @@
 {% block title %}Log In{% endblock %}
 {% block css %}
     <link href="{% static 'events/css/login_signup.css' %}" rel="stylesheet">
-    <link href="{% static 'gandharva/css/sal.css' %}" rel="stylesheet">
+    <link href="{% static 'events/css/sal.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
     <div class="col-sm-12" style="height:64px; background-color:#f9ab00"></div>
     <div class="container">
-        <div class="col-sm-5 container-center">
+        <div class="col-sm-5 container-center" data-sal="slide-up"
+                data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800">
             <h1>User Login</h1>
             <br>
             <form method="post" action="{% url 'user_login' %}">
@@ -45,9 +46,15 @@
             <br>
             <form method="post" action="{% url 'register' %}">
                 {% csrf_token %}
-                <h5>Not Signed Up? Register Now</h5>
-                <button type="submit" class="btn btn-primary pull-right">Register</button>
+                <h5>Not Signed Up?
+                    Register Now</h5>
+                <button type="submit" class="btn btn-primary pull-right">Register
+                </button>
             </form>
         </div>
     </div>
+    {% block scripts %}
+        <script type="text/javascript"> sal();</script>
+    {% endblock %}
+
 {% endblock %}
