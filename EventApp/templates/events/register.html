@@ -8,7 +8,8 @@
 {% block body %}
     <div class="col-sm-12" style="height:64px; background-color:#f9ab00"></div>
     <div class="container">
-        <div class="col-sm-5 container-center">
+        <div class="col-sm-5 container-center" data-sal="slide-up"
+                data-sal-easing="ease-out-bounce" data-sal-delay="100" data-sal-duration="800">
             <h1>User Registration</h1>
             <form method="post">
                 {% csrf_token %}
@@ -54,4 +55,8 @@
             <br><br>
         </div>
     </div>
+    {% block scripts %}
+        <script type="text/javascript"> sal();</script>
+    {% endblock %}
+
 {% endblock %}
