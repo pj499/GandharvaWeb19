@@ -293,7 +293,7 @@ nav li .active a {
 
 .carousel-item img {
     width: 100%;
-    height: 700px;
+    height: 580px;
     object-fit: cover;
     opacity: 0.4;
 }

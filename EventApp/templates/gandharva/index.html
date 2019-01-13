@@ -222,28 +222,16 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.5401738494324!2d73.8832296900385!3d18.45917563402179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaf41ac81e59%3A0xeedc5be537570702!2sVIIT+College+Of+Engineering!5e0!3m2!1sen!2sin!4v1542291058693"
                     frameborder="0" style="border:0;width:100%;height:100%" allowfullscreen></iframe>
         </div>
-
     </section>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
-            integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-            crossorigin="anonymous"></script>
-
-    {#    <script type="text/javascript" src="{% static 'gandharva/js/jquery.js' %}"></script>#}
-    {#    <script type="text/javascript" src="{% static 'gandharva/js/bootstrap.min.js' %}"></script>#}
-    <script type="text/javascript" src="{% static 'gandharva/js/jquery.parallax.js' %}"></script>
-    <script type="text/javascript" src="{% static 'gandharva/js/jquery.scrollTo.js' %}"></script>
-    <script type="text/javascript" src="{% static 'gandharva/js/jquery.nav.js' %}"></script>
-    <script type="text/javascript" src="{% static 'gandharva/js/coundown-timer.js' %}"></script>
-    <script type="text/javascript" src="{% static 'gandharva/js/smoothscroll.js' %}"></script>
-    <script type="text/javascript" src="{% static 'gandharva/js/main.js' %}"></script>
-    <script type="text/javascript" src="{% static 'gandharva/js/sal.js' %}"></script>
-    <script type="text/javascript" src="{% static 'gandharva/js/slick.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'gandharva/js/home.js' %}"></script>
+    {% block scripts %}
+        <script type="text/javascript" src="{% static 'gandharva/js/jquery.parallax.js' %}"></script>
+        <script type="text/javascript" src="{% static 'gandharva/js/jquery.scrollTo.js' %}"></script>
+        <script type="text/javascript" src="{% static 'gandharva/js/jquery.nav.js' %}"></script>
+        <script type="text/javascript" src="{% static 'gandharva/js/coundown-timer.js' %}"></script>
+        <script type="text/javascript" src="{% static 'gandharva/js/smoothscroll.js' %}"></script>
+        <script type="text/javascript" src="{% static 'gandharva/js/main.js' %}"></script>
+        <script type="text/javascript" src="{% static 'gandharva/js/sal.js' %}"></script>
+        <script type="text/javascript" src="{% static 'gandharva/js/slick.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'gandharva/js/home.js' %}"></script>
+    {% endblock %}
 {% endblock %}
