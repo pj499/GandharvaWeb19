@@ -1,0 +1,80 @@
+/*************************
+******Contact CSS****
+**************************/
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+    background-color: #f9ab00;
+}
+
+.contact-section {
+    background-color: #f9ab00;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#contact .container {
+    padding-top: 47px;
+}
+
+#contact h3 {
+    text-transform: inherit;
+    color: #373737;
+}
+
+#contact-section h3 {
+    margin-bottom: 25px
+}
+
+#contact address {
+    font-size: 18px;
+    color: #373737;
+    word-wrap: break-word;
+}
+
+.contact-text {
+    margin-bottom: 35px;
+    display: block;
+}
+
+#contact-section .form-control {
+    border-color: #ae750d;
+    box-shadow: none;
+    outline: 0 none;
+    border-radius: 0;
+    color: #797979;
+    font-size: 18px;
+}
+
+#contact-section .form-control:focus {
+    border-color: #ae750d;
+}
+
+#contact-section input {
+    height: 44px;
+}
+
+#contact-section textarea {
+    height: 90px;
+    resize: none;
+}
+
+#contact-section .btn-primary {
+    background-color: #373737;
+    color: #f7ab24;
+    border: none;
+    font-size: 24px;
+    padding: 6px 42px;
+    margin-bottom: 20px;
+    margin-top: 10px
+}
+
+#contact-section .btn-primary:hover {
+    background-color: #212020;
+    color: #fff
+}
