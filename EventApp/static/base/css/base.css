@@ -23,6 +23,13 @@ nav .navbar-nav li a {
     opacity: 1;
 }
 
+.dropdownStyle {
+    color: white !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 4px;
+}
+
 .navbar-nav > li > .dropdown-menu {
     opacity: 1;
     background-color: #1B7B98;
@@ -30,6 +37,7 @@ nav .navbar-nav li a {
 
 .navbar-nav > li > .dropdown-menu :hover {
     background-color: #fff;
+    color: #16728f !important;
 }
 
 .solid {
@@ -52,7 +60,6 @@ nav li .active a {
     text-transform: uppercase;
     margin: 4px;
 }
-
 
 /*************************
 ******Footer CSS****

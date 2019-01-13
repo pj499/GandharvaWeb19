@@ -42,7 +42,7 @@
                         <form method="post" action="{% url 'events' %}">
                             {% csrf_token %}
                             <input type="hidden" name="dept" value={{ event.name }}>
-                            <button type="submit" class="dropdown-item">{{ event.name }}</button>
+                            <button type="submit" class="dropdown-item dropdownStyle">{{ event.name }}</button>
                         </form>
 
                     {% endfor %}
